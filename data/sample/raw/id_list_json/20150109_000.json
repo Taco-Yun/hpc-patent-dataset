@@ -1,0 +1,854 @@
+{
+  "results": {
+    "total_num_results": 5,
+    "total_num_pages": 1,
+    "many_results": false,
+    "num_page": 0,
+    "cluster": [
+      {
+        "result": [
+          {
+            "id": "patent/US11603415B2/en",
+            "rank": 0,
+            "patent": {
+              "title": " Dry solids of anionically modified cellulose nanofibers and processes for &amp;hellip;",
+              "snippet": " Dry solids of anionically modified cellulose nanofibers with good redispersion are provided by incorporating 5 to 300% by mass of a water-soluble polymer relative to the anionically modified cellulose nanofibers during the preparation of the dry solids of anionically modified cellulose nanofibers.",
+              "priority_date": "2014-01-17",
+              "filing_date": "2015-01-09",
+              "grant_date": "2023-03-14",
+              "publication_date": "2023-03-14",
+              "inventor": "Takeshi Nakatani",
+              "assignee": "Nippon Paper Industries Co., Ltd.",
+              "publication_number": "US11603415B2",
+              "language": "en",
+              "thumbnail": "",
+              "pdf": "ae/46/56/25ec061d3a795b/US11603415.pdf",
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "WO",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "EP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CN",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "JP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US10100168B2/en",
+            "rank": 1,
+            "patent": {
+              "title": " Recovery of additive manufacturing support materials",
+              "snippet": "&amp;hellip;  from the water, and (vi) removing any water remaining from the precipitate of the water soluble support polymer, wherein the water soluble support polymer is a hydroxypropyl cellulose (&lt;b&gt;HPC&lt;/b&gt;), a hydroxypropyl methylcellulose (HPMC), hydroxyethyl methylcellulose (HEMC) or combination thereof.",
+              "priority_date": "2014-01-16",
+              "filing_date": "2015-01-09",
+              "grant_date": "2018-10-16",
+              "publication_date": "2018-10-16",
+              "inventor": "Roland Bayer",
+              "assignee": "Dow Global Technologies Llc",
+              "publication_number": "US10100168B2",
+              "language": "en",
+              "thumbnail": "",
+              "pdf": "22/42/98/c3dd3faee02854/US10100168.pdf",
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "WO",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "EP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CN",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "JP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "KR",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US9483319B2/en",
+            "rank": 2,
+            "patent": {
+              "title": " Job scheduling apparatus and method therefor",
+              "snippet": " BACKGROUND In &lt;b&gt;high performance computing&lt;/b&gt; (&lt;b&gt;HPC&lt;/b&gt;) used in computing centers and the like, jobs are assigned to computational resources of compute nodes such that the computational resources are used fairly and efficiently. Each job is executed on a compute node allocated to the job. Upon completion of &amp;hellip;",
+              "priority_date": "2014-02-04",
+              "filing_date": "2015-01-09",
+              "grant_date": "2016-11-01",
+              "publication_date": "2016-11-01",
+              "inventor": "Yoshifumi Ujibashi",
+              "assignee": "Fujitsu Limited",
+              "publication_number": "US9483319B2",
+              "language": "en",
+              "thumbnail": "59/8b/2d/5b1650f413fdff/US09483319-20161101-D00000.png",
+              "pdf": "8e/f2/5c/7cb821d7520647/US9483319.pdf",
+              "figures": [
+                {
+                  "thumbnail": "b4/1c/35/f9eb9fdad79a04/US09483319-20161101-D00000.png",
+                  "full": "08/30/1c/62cee353a84df6/US09483319-20161101-D00000.png"
+                },
+                {
+                  "thumbnail": "b9/d9/d9/33be0ad4a136cd/US09483319-20161101-D00001.png",
+                  "full": "b3/f0/aa/0103cf10ab4fdf/US09483319-20161101-D00001.png"
+                },
+                {
+                  "thumbnail": "57/7e/00/2fb1664fd64815/US09483319-20161101-D00002.png",
+                  "full": "26/e8/82/c0c46b4de91845/US09483319-20161101-D00002.png"
+                },
+                {
+                  "thumbnail": "ab/43/60/db49baaaf33720/US09483319-20161101-D00003.png",
+                  "full": "2b/25/d2/51f87d838fc284/US09483319-20161101-D00003.png"
+                },
+                {
+                  "thumbnail": "fc/55/83/7a4eb704d11f18/US09483319-20161101-D00004.png",
+                  "full": "97/f9/bb/0da38e0c46236d/US09483319-20161101-D00004.png"
+                },
+                {
+                  "thumbnail": "5e/49/56/647ccea6c1458d/US09483319-20161101-D00005.png",
+                  "full": "4b/ad/52/80fe7ba7d13f5b/US09483319-20161101-D00005.png"
+                },
+                {
+                  "thumbnail": "07/36/32/07f4f65a4509a4/US09483319-20161101-D00006.png",
+                  "full": "af/7b/b8/725e9eb4459f57/US09483319-20161101-D00006.png"
+                },
+                {
+                  "thumbnail": "a4/71/56/4df8d32ae02796/US09483319-20161101-D00007.png",
+                  "full": "9c/05/18/2182164be7598e/US09483319-20161101-D00007.png"
+                },
+                {
+                  "thumbnail": "db/9a/f8/752caae091a0b6/US09483319-20161101-D00008.png",
+                  "full": "78/f8/1a/b92e8cbd4f3afc/US09483319-20161101-D00008.png"
+                },
+                {
+                  "thumbnail": "c8/8e/ad/2b54f6d6d2dae0/US09483319-20161101-D00009.png",
+                  "full": "37/18/97/1ecc57b85650ab/US09483319-20161101-D00009.png"
+                },
+                {
+                  "thumbnail": "1a/ad/65/e9fa7a528080cf/US09483319-20161101-D00010.png",
+                  "full": "a7/f2/2f/704b36b1f9e698/US09483319-20161101-D00010.png"
+                },
+                {
+                  "thumbnail": "52/06/df/1183d9de59b138/US09483319-20161101-D00011.png",
+                  "full": "b3/79/b7/0578fbccb60ccb/US09483319-20161101-D00011.png"
+                },
+                {
+                  "thumbnail": "86/11/4b/843d8bcaf42b65/US09483319-20161101-D00012.png",
+                  "full": "31/cc/95/b6e5ef97e10716/US09483319-20161101-D00012.png"
+                },
+                {
+                  "thumbnail": "84/f4/5f/3da7a53283fd77/US09483319-20161101-D00013.png",
+                  "full": "b0/52/c0/1360b6c8e602a4/US09483319-20161101-D00013.png"
+                },
+                {
+                  "thumbnail": "e9/b0/21/7d0e77e6aab480/US09483319-20161101-D00014.png",
+                  "full": "3e/31/5e/a4a7c0609398fe/US09483319-20161101-D00014.png"
+                },
+                {
+                  "thumbnail": "18/ce/bf/20c922dd9df7f6/US09483319-20161101-D00015.png",
+                  "full": "ac/32/5f/c5bc04fcb40d86/US09483319-20161101-D00015.png"
+                },
+                {
+                  "thumbnail": "90/14/83/e426abece7f110/US09483319-20161101-D00016.png",
+                  "full": "54/4e/25/f5f05f6291eff6/US09483319-20161101-D00016.png"
+                },
+                {
+                  "thumbnail": "68/95/78/382d791620516a/US09483319-20161101-D00017.png",
+                  "full": "21/83/a0/3fcce50c777745/US09483319-20161101-D00017.png"
+                },
+                {
+                  "thumbnail": "8b/26/0b/ea59714e6ad693/US09483319-20161101-D00018.png",
+                  "full": "47/c2/40/6e37eb8b4e66dc/US09483319-20161101-D00018.png"
+                },
+                {
+                  "thumbnail": "91/32/4a/1d72b0b6600bfe/US09483319-20161101-D00019.png",
+                  "full": "05/a3/74/c877eeacb2f2d3/US09483319-20161101-D00019.png"
+                },
+                {
+                  "thumbnail": "3e/75/01/e1584ba4325dca/US09483319-20161101-D00020.png",
+                  "full": "0a/b8/37/4942bff0cfed35/US09483319-20161101-D00020.png"
+                },
+                {
+                  "thumbnail": "79/cc/1a/16e9ae71a7d111/US09483319-20161101-D00021.png",
+                  "full": "ca/fa/96/7a22eab44cdeac/US09483319-20161101-D00021.png"
+                },
+                {
+                  "thumbnail": "8d/0b/d8/da7ae700f847cf/US09483319-20161101-D00022.png",
+                  "full": "0a/c4/fd/458ab79e9ec454/US09483319-20161101-D00022.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "JP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US10709897B2/en",
+            "rank": 3,
+            "patent": {
+              "title": " Treatment intervals for use of compositions comprising energy absorbing &amp;hellip;",
+              "snippet": "&amp;hellip;  . In another embodiment, the formulation comprises hydroxypropylcellulose (&lt;b&gt;HPC&lt;/b&gt;) and carboxymethyl cellulose (CMC). In still another embodiment, the formulation comprises any one or more of water, ethanol, propylene glycol, polysorbate 80, diisopropyl adipate, phospholipon, and thickening agents.",
+              "priority_date": "2014-01-10",
+              "filing_date": "2015-01-09",
+              "grant_date": "2020-07-14",
+              "publication_date": "2020-07-14",
+              "inventor": "Anthony V. Lando",
+              "assignee": "Sebacia, Inc.",
+              "publication_number": "US10709897B2",
+              "language": "en",
+              "thumbnail": "a1/f5/8b/7bae8f4d6ae1fe/US10709897-20200714-D00000.png",
+              "pdf": "6c/d4/c0/2b1ae4c0c27c7c/US10709897.pdf",
+              "figures": [
+                {
+                  "thumbnail": "d2/af/2e/e274b9ce7bcc65/US10709897-20200714-D00000.png",
+                  "full": "0f/c3/7a/795ed771e1a052/US10709897-20200714-D00000.png"
+                },
+                {
+                  "thumbnail": "1f/bc/a9/a2b23f915eefae/US10709897-20200714-D00001.png",
+                  "full": "4d/6e/ec/17c73f760e1569/US10709897-20200714-D00001.png"
+                },
+                {
+                  "thumbnail": "98/ca/fd/3c71d20507ea1a/US10709897-20200714-D00002.png",
+                  "full": "d5/9f/f3/e782f6b5d400af/US10709897-20200714-D00002.png"
+                },
+                {
+                  "thumbnail": "23/97/b1/aa5eda6bf7a1e2/US10709897-20200714-D00003.png",
+                  "full": "e3/a6/12/bb49c40dd2a84d/US10709897-20200714-D00003.png"
+                },
+                {
+                  "thumbnail": "0d/5f/e0/9a9dad1bf331e2/US10709897-20200714-D00004.png",
+                  "full": "de/02/4f/249c23b4ff0191/US10709897-20200714-D00004.png"
+                },
+                {
+                  "thumbnail": "9c/c9/d4/ec0418f0753612/US10709897-20200714-D00005.png",
+                  "full": "39/90/15/fa6eb4a6a03dbd/US10709897-20200714-D00005.png"
+                },
+                {
+                  "thumbnail": "5f/01/18/7103e95ba7ba34/US10709897-20200714-D00006.png",
+                  "full": "83/4e/4f/64b443e4a7abf5/US10709897-20200714-D00006.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "WO",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "EP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CN",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "JP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "KR",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "AU",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CA",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "DK",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "ES",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "MX",
+                      "best_patent_stage": {
+                        "state": "UNKNOWN"
+                      }
+                    },
+                    {
+                      "country_code": "PL",
+                      "best_patent_stage": {
+                        "state": "UNKNOWN"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US11648184B2/en",
+            "rank": 4,
+            "patent": {
+              "title": " Dental composition containing ion sustained-release glass",
+              "snippet": " To provide a dental composition wherein the acid buffering capacity can be attained and the acid resistance of the tooth substance can be improved while maintaining very high foul breath inhibition capacity. A dental composition including: ion sustained-release glass; and a carrier for supporting &amp;hellip;",
+              "priority_date": "2014-05-30",
+              "filing_date": "2015-01-09",
+              "grant_date": "2023-05-16",
+              "publication_date": "2023-05-16",
+              "inventor": "Daisuke Hara",
+              "assignee": "Shofu Inc.",
+              "publication_number": "US11648184B2",
+              "language": "en",
+              "thumbnail": "",
+              "pdf": "5a/bd/f3/ceed2407bbdf31/US11648184.pdf",
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "EP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          }
+        ]
+      }
+    ],
+    "chem_exhausted": false,
+    "summary": {
+      "assignee": [
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "key": "Dow Global Technologies Llc",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Fujitsu Limited",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Sebacia, Inc.",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Shofu Inc.",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Nippon Paper Industries Co., Ltd.",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "inventor": [
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "key": "Anthony V. Lando",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Takeshi Nakatani",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Hidefumi Fujimura",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Yoshifumi Ujibashi",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Scott T. Matteucci",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Kohta Nakashima",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Erin C. Keller",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Daisuke Hara",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Robert S. Moglia",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Koji Kimura",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Dilip Paithankar",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Mary Anne Leugers",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Katsura ISHIKAWA",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Yuji SADAKANE",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Roland Bayer",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Aleksander J. Pyzik",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Sharon Allen",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Daniel L. Dermody",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Todd J. MEYER",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "cpc": [
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "key": "A61Q",
+          "value": 400,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "key": "A61K",
+          "value": 400,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "key": "C08L",
+          "value": 400,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "key": "B33Y",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "A61B",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "G06F",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "A61P",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "C08B",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "B29C",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "C08J",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Y02W",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "B05D",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "A61N",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

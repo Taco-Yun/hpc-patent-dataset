@@ -1,0 +1,154 @@
+{
+  "results": {
+    "total_num_results": 1,
+    "total_num_pages": 1,
+    "many_results": false,
+    "num_page": 0,
+    "cluster": [
+      {
+        "result": [
+          {
+            "id": "patent/US9112890B1/en",
+            "rank": 0,
+            "patent": {
+              "title": " Distributed storage over shared multi-queued storage device",
+              "snippet": " is a block diagram that schematically illustrates a computing system 20 , in accordance with an embodiment of the present invention. System 20 may comprise, for example, a data center, a &lt;b&gt;High-Performance Computing&lt;/b&gt; (&lt;b&gt;HPC&lt;/b&gt;) cluster, or any other suitable system. System 20 comprises multiple servers 24",
+              "priority_date": "2014-08-20",
+              "filing_date": "2015-01-18",
+              "grant_date": "2015-08-18",
+              "publication_date": "2015-08-18",
+              "inventor": "Zivan Ori",
+              "assignee": "E8 Storage Systems Ltd.",
+              "publication_number": "US9112890B1",
+              "language": "en",
+              "thumbnail": "e8/27/86/62cc0d81f604e3/US09112890-20150818-D00000.png",
+              "pdf": "42/c8/92/35cd9be967a48c/US9112890.pdf",
+              "figures": [
+                {
+                  "thumbnail": "16/89/de/1c4751bf6b6028/US09112890-20150818-D00000.png",
+                  "full": "7d/d6/f1/fe98eb73465ba1/US09112890-20150818-D00000.png"
+                },
+                {
+                  "thumbnail": "3f/65/2b/512621f632fbb4/US09112890-20150818-D00001.png",
+                  "full": "b5/33/24/5088b91a40b8b2/US09112890-20150818-D00001.png"
+                },
+                {
+                  "thumbnail": "41/f6/aa/32d9fe602be655/US09112890-20150818-D00002.png",
+                  "full": "1a/97/2b/ad8d147804a7c1/US09112890-20150818-D00002.png"
+                },
+                {
+                  "thumbnail": "d7/8a/27/934c5afb07af65/US09112890-20150818-D00003.png",
+                  "full": "01/37/39/7c4c8a68da8045/US09112890-20150818-D00003.png"
+                },
+                {
+                  "thumbnail": "26/a0/8b/3aa8b5961f33c7/US09112890-20150818-D00004.png",
+                  "full": "a8/62/70/83180ce8c8002e/US09112890-20150818-D00004.png"
+                },
+                {
+                  "thumbnail": "ef/ba/56/fb23dff98a2244/US09112890-20150818-D00005.png",
+                  "full": "78/f5/2a/8421db0e6dd959/US09112890-20150818-D00005.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          }
+        ]
+      }
+    ],
+    "chem_exhausted": false,
+    "summary": {
+      "assignee": [
+        {
+          "key": "E8 Storage Systems Ltd.",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "inventor": [
+        {
+          "key": "Zivan Ori",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "cpc": [
+        {
+          "key": "G06F",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "H04L",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

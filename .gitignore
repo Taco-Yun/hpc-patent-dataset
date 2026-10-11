@@ -1,0 +1,71 @@
+# ---- General ignore rules ----
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+*.swp
+*.tmp
+.env
+.env.*
+
+# ---- Python Project ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments (uv creates .venv/; uv.lock and .python-version ARE committed)
+.venv/
+venv/
+ENV/
+
+# Other package managers (this project uses uv)
+poetry.lock
+Pipfile
+Pipfile.lock
+
+# ---- Node.js Project ----
+node_modules/
+npm-debug.log
+yarn.lock
+
+# ---- IDE  ----
+.vscode/
+.idea/
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ---- Git ----
+*.orig
+
+# ---- Data ----
+# Patent PDFs are large (about 3 MB on average in the sample); never commit them.
+*.pdf
+
+# Full-run outputs. The example files currently in data/ should be committed first;
+# after that, uncomment these lines so a full run cannot be committed by accident.
+# (Files already committed stay tracked; data/sample/ is not affected by these patterns.)
+# data/raw/id_list_json/*.json
+# data/raw/html/*.html
+# data/interim/parsed_data.json
+# data/processed/*.csv
+
+# ---- Local files ----
+connectdb.py
+docker-compose.yml
+test.py
+
+# ---- Claude Code（本機專用，不上傳 GitHub）----
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+.mcp.json

@@ -1,0 +1,897 @@
+{
+  "results": {
+    "total_num_results": 6,
+    "total_num_pages": 1,
+    "many_results": false,
+    "num_page": 0,
+    "cluster": [
+      {
+        "result": [
+          {
+            "id": "patent/US9430288B2/en",
+            "rank": 0,
+            "patent": {
+              "title": " Job scheduling based on historical job data",
+              "snippet": " 104 ) comprises one or more nodes capable of processing jobs or applications. In a computing unit having a plurality of computing nodes (e.g., a cluster of &lt;b&gt;HPC&lt;/b&gt; nodes), the nodes can be coupled to one another via, for instance, a Local Area Network or other type of connection. The master computing &amp;hellip;",
+              "priority_date": "2014-01-10",
+              "filing_date": "2015-01-05",
+              "grant_date": "2016-08-30",
+              "publication_date": "2016-08-30",
+              "inventor": "Nicholas Wilson",
+              "assignee": "Fujitsu Limited",
+              "publication_number": "US9430288B2",
+              "language": "en",
+              "thumbnail": "8a/39/71/1a3f7ca9f0d9d3/US09430288-20160830-D00000.png",
+              "pdf": "60/eb/67/9421ca80646d39/US9430288.pdf",
+              "figures": [
+                {
+                  "thumbnail": "f6/af/b4/2675b3669cd1e0/US09430288-20160830-D00000.png",
+                  "full": "b6/8e/f3/70ae838f4b2d53/US09430288-20160830-D00000.png"
+                },
+                {
+                  "thumbnail": "16/ea/1e/08cf42fd470e3b/US09430288-20160830-D00001.png",
+                  "full": "5f/9c/5b/4cee629ca9c2d7/US09430288-20160830-D00001.png"
+                },
+                {
+                  "thumbnail": "c6/e2/e5/a8bf2dc5b96f3a/US09430288-20160830-D00002.png",
+                  "full": "4c/53/0e/c88e90dd932596/US09430288-20160830-D00002.png"
+                },
+                {
+                  "thumbnail": "55/36/cc/990a43d9061d82/US09430288-20160830-D00003.png",
+                  "full": "ed/0c/16/0bc3d72f0d2892/US09430288-20160830-D00003.png"
+                },
+                {
+                  "thumbnail": "7e/49/f3/9729203cc65e30/US09430288-20160830-D00004.png",
+                  "full": "ff/6f/6b/eb068af7f8109b/US09430288-20160830-D00004.png"
+                },
+                {
+                  "thumbnail": "64/1c/ce/9895ac7505a598/US09430288-20160830-D00005.png",
+                  "full": "c0/17/89/4123af0056a307/US09430288-20160830-D00005.png"
+                },
+                {
+                  "thumbnail": "b1/3c/35/3e53fea9bf06bc/US09430288-20160830-D00006.png",
+                  "full": "51/3e/0c/f70091b1289c5d/US09430288-20160830-D00006.png"
+                },
+                {
+                  "thumbnail": "40/ed/38/58c42111c6f06d/US09430288-20160830-D00007.png",
+                  "full": "ff/37/04/da1da210a630eb/US09430288-20160830-D00007.png"
+                },
+                {
+                  "thumbnail": "30/91/a2/0b2d2abb1c8e9a/US09430288-20160830-D00008.png",
+                  "full": "b1/af/23/203773566ee054/US09430288-20160830-D00008.png"
+                },
+                {
+                  "thumbnail": "14/7a/c4/2ba04af03e19fe/US09430288-20160830-D00009.png",
+                  "full": "e3/4f/6d/94b293e5f3e6a7/US09430288-20160830-D00009.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "EP",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "JP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US9023389B1/en",
+            "rank": 1,
+            "patent": {
+              "title": " Compositions for treatment of attention deficit hyperactivity disorder",
+              "snippet": " Therapeutic compositions and methods for treatment of attention deficit disorder (ADD) or attention deficit hyperactivity disorder (ADHD) include dosage forms that deliver a therapeutic amount of active drug in a delayed and controlled release formulation. The dosage form can be administered at &amp;hellip;",
+              "priority_date": "2011-03-23",
+              "filing_date": "2015-01-05",
+              "grant_date": "2015-05-05",
+              "publication_date": "2015-05-05",
+              "inventor": "David Lickrish",
+              "assignee": "Ironshore Pharmaceuticals &amp; Development, Inc.",
+              "publication_number": "US9023389B1",
+              "language": "en",
+              "thumbnail": "40/a7/02/03f4aaaf444bc1/US09023389-20150505-D00001.png",
+              "pdf": "03/92/e2/592faa1562da25/US9023389.pdf",
+              "figures": [
+                {
+                  "thumbnail": "4e/8a/1f/b78122cbd5219f/US09023389-20150505-D00001.png",
+                  "full": "82/47/84/9a4732c3fdb6ca/US09023389-20150505-D00001.png"
+                },
+                {
+                  "thumbnail": "eb/39/ea/f4caca3c516470/US09023389-20150505-D00002.png",
+                  "full": "0a/3a/e7/642006719fbc66/US09023389-20150505-D00002.png"
+                },
+                {
+                  "thumbnail": "70/a7/7f/77dfac30087fa9/US09023389-20150505-D00003.png",
+                  "full": "ea/52/0c/bb35b3a1bc40d3/US09023389-20150505-D00003.png"
+                },
+                {
+                  "thumbnail": "fa/a1/5d/2e54a88d809c3b/US09023389-20150505-D00004.png",
+                  "full": "0b/75/27/3bd4f6eca4d8d9/US09023389-20150505-D00004.png"
+                },
+                {
+                  "thumbnail": "49/14/b1/fcccc6d8dea5ed/US09023389-20150505-D00005.png",
+                  "full": "17/93/07/2bae38c7607c33/US09023389-20150505-D00005.png"
+                },
+                {
+                  "thumbnail": "df/12/d4/acf877c14fd281/US09023389-20150505-D00006.png",
+                  "full": "1f/4c/cb/5405f81185aec8/US09023389-20150505-D00006.png"
+                },
+                {
+                  "thumbnail": "81/c4/a1/61f90236501566/US09023389-20150505-D00007.png",
+                  "full": "cc/74/a4/fcc2189490d791/US09023389-20150505-D00007.png"
+                },
+                {
+                  "thumbnail": "be/e8/2c/06ac84c1d0d513/US09023389-20150505-D00008.png",
+                  "full": "3f/bc/6a/ff22a3e5699b06/US09023389-20150505-D00008.png"
+                },
+                {
+                  "thumbnail": "23/21/5c/967385185c22db/US09023389-20150505-D00009.png",
+                  "full": "98/34/33/6c697526312424/US09023389-20150505-D00009.png"
+                },
+                {
+                  "thumbnail": "00/98/3d/ee3b7b76c2c615/US09023389-20150505-D00010.png",
+                  "full": "bd/e6/42/df117848c58b38/US09023389-20150505-D00010.png"
+                },
+                {
+                  "thumbnail": "71/be/22/7aff7e3de97a12/US09023389-20150505-D00011.png",
+                  "full": "cd/21/de/95e73bc384f674/US09023389-20150505-D00011.png"
+                },
+                {
+                  "thumbnail": "01/fe/22/4b2934833a3892/US09023389-20150505-D00012.png",
+                  "full": "58/3f/84/4d8feb6bf60d9c/US09023389-20150505-D00012.png"
+                },
+                {
+                  "thumbnail": "4f/7f/2b/9c5b9036909f00/US09023389-20150505-D00013.png",
+                  "full": "53/7c/19/6ec928b90d2467/US09023389-20150505-D00013.png"
+                },
+                {
+                  "thumbnail": "2b/3e/2d/9d7eb41c203667/US09023389-20150505-D00014.png",
+                  "full": "78/5c/e0/28bee3c9a21252/US09023389-20150505-D00014.png"
+                },
+                {
+                  "thumbnail": "0b/c1/43/d8b476203ee2ed/US09023389-20150505-D00015.png",
+                  "full": "63/95/1f/6e2968d13c34cc/US09023389-20150505-D00015.png"
+                },
+                {
+                  "thumbnail": "0c/b4/27/27387cb8d1b86e/US09023389-20150505-D00016.png",
+                  "full": "32/c2/50/92a05a11310fda/US09023389-20150505-D00016.png"
+                },
+                {
+                  "thumbnail": "7f/50/49/d2d217a41fce70/US09023389-20150505-D00017.png",
+                  "full": "18/04/20/c298330e781024/US09023389-20150505-D00017.png"
+                },
+                {
+                  "thumbnail": "0e/e4/e5/be74f6c2389dcb/US09023389-20150505-D00018.png",
+                  "full": "9d/2c/27/66e60e7ac745b3/US09023389-20150505-D00018.png"
+                },
+                {
+                  "thumbnail": "c6/f4/ac/7ba2110b814842/US09023389-20150505-D00019.png",
+                  "full": "27/5a/30/0bc14a7c6135f2/US09023389-20150505-D00019.png"
+                },
+                {
+                  "thumbnail": "74/da/cf/27c13ad9322f30/US09023389-20150505-D00020.png",
+                  "full": "50/d6/cb/b92f4cd9d31daa/US09023389-20150505-D00020.png"
+                },
+                {
+                  "thumbnail": "d5/e6/21/ecd1de88b19943/US09023389-20150505-D00021.png",
+                  "full": "b2/32/47/58def9188c6add/US09023389-20150505-D00021.png"
+                },
+                {
+                  "thumbnail": "5a/c0/86/85599bdffeccbf/US09023389-20150505-D00022.png",
+                  "full": "23/db/b7/1ef62a85fbb26e/US09023389-20150505-D00022.png"
+                },
+                {
+                  "thumbnail": "9f/0d/53/f95ce5502d5c06/US09023389-20150505-D00023.png",
+                  "full": "78/2d/80/647b9051070ec7/US09023389-20150505-D00023.png"
+                },
+                {
+                  "thumbnail": "f0/5c/e8/00fb2f529441fc/US09023389-20150505-D00024.png",
+                  "full": "40/bf/c1/22b4db43e60121/US09023389-20150505-D00024.png"
+                },
+                {
+                  "thumbnail": "68/80/4e/7707daf58d4c2e/US09023389-20150505-D00025.png",
+                  "full": "35/d6/ff/f6c73a785c6aee/US09023389-20150505-D00025.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US9480641B2/en",
+            "rank": 2,
+            "patent": {
+              "title": " Methods and compositions for treatment of halitosis",
+              "snippet": " as created into a tablet form are as follows. These examples are illustrative and should not be regarded as limiting. Hydroxypropylcellulose (&lt;b&gt;HPC&lt;/b&gt;) and Carbopol (CP) 940 are mixed with the active ingredient. The active ingredient is, for example, an herbal formulation. In one embodiment, tablets are &amp;hellip;",
+              "priority_date": "2006-09-05",
+              "filing_date": "2015-01-05",
+              "grant_date": "2016-11-01",
+              "publication_date": "2016-11-01",
+              "inventor": "Michael Moshe PEREZ DAVIDI",
+              "assignee": "Michael Moshe PEREZ DAVIDI",
+              "publication_number": "US9480641B2",
+              "language": "en",
+              "thumbnail": "35/bd/f2/eb2d2cf7c8e2c2/US09480641-20161101-D00000.png",
+              "pdf": "0a/cf/a2/57df17777c16da/US9480641.pdf",
+              "figures": [
+                {
+                  "thumbnail": "e1/ed/10/19048e4ef3b0f3/US09480641-20161101-D00000.png",
+                  "full": "0d/5f/00/a2f9b11f4b1386/US09480641-20161101-D00000.png"
+                },
+                {
+                  "thumbnail": "93/f4/ed/02614ed3bcc8b5/US09480641-20161101-D00001.png",
+                  "full": "09/bb/31/3be9ac2a7d1494/US09480641-20161101-D00001.png"
+                },
+                {
+                  "thumbnail": "a9/90/81/be1cf08000ba2c/US09480641-20161101-D00002.png",
+                  "full": "84/98/e0/8c3f0a42feb1d2/US09480641-20161101-D00002.png"
+                },
+                {
+                  "thumbnail": "c4/0f/9c/4faadd88f33ff1/US09480641-20161101-D00003.png",
+                  "full": "f3/c1/4e/2ac307c5ecd265/US09480641-20161101-D00003.png"
+                },
+                {
+                  "thumbnail": "2e/f3/72/073bdbcae28bd7/US09480641-20161101-D00004.png",
+                  "full": "f3/64/7a/f78ad94465280c/US09480641-20161101-D00004.png"
+                },
+                {
+                  "thumbnail": "8f/79/90/76d0386edd8646/US09480641-20161101-D00005.png",
+                  "full": "55/3b/76/fd1381e9e5541b/US09480641-20161101-D00005.png"
+                },
+                {
+                  "thumbnail": "ce/f1/55/7cf285a9485bee/US09480641-20161101-D00006.png",
+                  "full": "a7/55/86/7d14e810f6650b/US09480641-20161101-D00006.png"
+                },
+                {
+                  "thumbnail": "99/8b/56/68848ed9f982cf/US09480641-20161101-D00007.png",
+                  "full": "e1/31/b9/73632a5882c63e/US09480641-20161101-D00007.png"
+                },
+                {
+                  "thumbnail": "1d/b2/fc/0281d131ec06eb/US09480641-20161101-D00008.png",
+                  "full": "31/39/3d/0d75b31d2c4e75/US09480641-20161101-D00008.png"
+                },
+                {
+                  "thumbnail": "38/a8/6a/4594e4dd1598a0/US09480641-20161101-D00009.png",
+                  "full": "52/63/ee/8c34de4fe88e61/US09480641-20161101-D00009.png"
+                },
+                {
+                  "thumbnail": "66/b5/f4/82e074476511d7/US09480641-20161101-D00010.png",
+                  "full": "18/5e/72/d375133a37300a/US09480641-20161101-D00010.png"
+                },
+                {
+                  "thumbnail": "0d/e0/1a/192e26d7902ea0/US09480641-20161101-D00011.png",
+                  "full": "1b/fa/79/1ad7b31b6e6dd9/US09480641-20161101-D00011.png"
+                },
+                {
+                  "thumbnail": "89/5c/56/69bc02815f5ebb/US09480641-20161101-D00012.png",
+                  "full": "56/06/2a/1f7f06bb3aac19/US09480641-20161101-D00012.png"
+                },
+                {
+                  "thumbnail": "47/19/e2/d171f5ae339aff/US09480641-20161101-D00013.png",
+                  "full": "e7/ff/ab/880e375449dcf0/US09480641-20161101-D00013.png"
+                },
+                {
+                  "thumbnail": "04/9f/68/33948d47cbc6cf/US09480641-20161101-D00014.png",
+                  "full": "fa/62/56/95157eca3f7479/US09480641-20161101-D00014.png"
+                },
+                {
+                  "thumbnail": "09/b7/c3/06a420a674c988/US09480641-20161101-D00015.png",
+                  "full": "c9/31/03/765657c9d1cd99/US09480641-20161101-D00015.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US9682023B2/en",
+            "rank": 3,
+            "patent": {
+              "title": " Method for preventing oral disease by penetrating polymicrobial oral biofilms &amp;hellip;",
+              "snippet": "&amp;hellip;  effective decontaminant on biofilms that form in DUWLs. A specific study yielded results that indicated that stabilized chlorine dioxide outperformed alkaline peroxide in managing biofilm growth, by retaining a heterotrophic plate count (&lt;b&gt;HPC&lt;/b&gt;) value of 0 after 5 days of treatment (Wirthlin et al.,",
+              "priority_date": "2007-07-09",
+              "filing_date": "2015-01-05",
+              "grant_date": "2017-06-20",
+              "publication_date": "2017-06-20",
+              "inventor": "James L. Ratcliff",
+              "assignee": "Micropure, Inc.",
+              "publication_number": "US9682023B2",
+              "language": "en",
+              "thumbnail": "1f/3b/13/0261654b259ff8/US09682023-20170620-D00001.png",
+              "pdf": "51/c2/f5/15704a55bbbabc/US9682023.pdf",
+              "figures": [
+                {
+                  "thumbnail": "63/9c/76/02b892f7e50beb/US09682023-20170620-D00001.png",
+                  "full": "a4/29/ce/341aabaa2a81c6/US09682023-20170620-D00001.png"
+                },
+                {
+                  "thumbnail": "59/38/05/02acbfc5266ed9/US09682023-20170620-D00002.png",
+                  "full": "b6/2f/9d/240770e850ce00/US09682023-20170620-D00002.png"
+                },
+                {
+                  "thumbnail": "e0/c1/e2/3f33c20ea1ab1e/US09682023-20170620-D00003.png",
+                  "full": "40/82/0e/e5f7e8eab13d79/US09682023-20170620-D00003.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "WO",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "EP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "AU",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CA",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US9600295B2/en",
+            "rank": 4,
+            "patent": {
+              "title": " Systems and methods of providing multiple video outputs during a pre-boot &amp;hellip;",
+              "snippet": "&amp;hellip;  trouble-shooting and configuration purposes. In one embodiment, the disclosed systems and methods may be advantageously implemented in a &lt;b&gt;high performance computing&lt;/b&gt; (&lt;b&gt;HPC&lt;/b&gt;) environment for servers having a dense GPU accelerator configuration and that populate discrete (add-in) video cards by default.",
+              "priority_date": "2015-01-05",
+              "filing_date": "2015-01-05",
+              "grant_date": "2017-03-21",
+              "publication_date": "2017-03-21",
+              "inventor": "Wei Liu",
+              "assignee": "Dell Products Lp",
+              "publication_number": "US9600295B2",
+              "language": "en",
+              "thumbnail": "1a/c1/a8/683dc8a887b244/US09600295-20170321-D00000.png",
+              "pdf": "f9/53/36/631cc7fe6fc96e/US9600295.pdf",
+              "figures": [
+                {
+                  "thumbnail": "ae/fa/dd/8b63a23b3c907a/US09600295-20170321-D00000.png",
+                  "full": "fb/47/c7/bb3ec82090890b/US09600295-20170321-D00000.png"
+                },
+                {
+                  "thumbnail": "1a/94/d1/a05cde9ddc15f5/US09600295-20170321-D00001.png",
+                  "full": "ee/1a/78/5f61d4ed7cbb59/US09600295-20170321-D00001.png"
+                },
+                {
+                  "thumbnail": "7b/3f/8d/e8f32b206f7ebb/US09600295-20170321-D00002.png",
+                  "full": "5f/1c/1b/c044017af790a6/US09600295-20170321-D00002.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US9366989B2/en",
+            "rank": 5,
+            "patent": {
+              "title": " Image forming apparatus",
+              "snippet": " An image forming apparatus includes at least one image bearer; multiple developing devices to develop the latent images with developers including toner and carrier into a toner image; multiple developer supply devices to supply the developers to the multiple developing devices, respectively; and a &amp;hellip;",
+              "priority_date": "2014-01-06",
+              "filing_date": "2015-01-05",
+              "grant_date": "2016-06-14",
+              "publication_date": "2016-06-14",
+              "inventor": "Daisuke Ito",
+              "assignee": "Ricoh Company, Ltd.",
+              "publication_number": "US9366989B2",
+              "language": "en",
+              "thumbnail": "d2/ce/14/abf7bedbb4b860/US09366989-20160614-D00000.png",
+              "pdf": "96/4d/e7/96719a16e9dd45/US9366989.pdf",
+              "figures": [
+                {
+                  "thumbnail": "fc/fa/8f/7ef7d4c03c0d5b/US09366989-20160614-D00000.png",
+                  "full": "85/4b/52/312c6d4c5cf044/US09366989-20160614-D00000.png"
+                },
+                {
+                  "thumbnail": "bd/3d/75/ff07c5c040c283/US09366989-20160614-D00001.png",
+                  "full": "72/90/ed/e7b64510965411/US09366989-20160614-D00001.png"
+                },
+                {
+                  "thumbnail": "fd/59/4a/073d38e881bffb/US09366989-20160614-D00002.png",
+                  "full": "cb/cc/e5/ca2b52a2b30701/US09366989-20160614-D00002.png"
+                },
+                {
+                  "thumbnail": "62/eb/a3/fe185bb9f20ef4/US09366989-20160614-D00003.png",
+                  "full": "bd/95/58/5a0901e83d86a1/US09366989-20160614-D00003.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "EP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "JP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          }
+        ]
+      }
+    ],
+    "chem_exhausted": false,
+    "summary": {
+      "assignee": [
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "key": "Fujitsu Limited",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Michael Moshe PEREZ DAVIDI",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Nir Sterer",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Ervin Itzchak Weiss",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Micropure, Inc.",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Dell Products Lp",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Ricoh Company, Ltd.",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Ironshore Pharmaceuticals &amp; Development, Inc.",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "inventor": [
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "key": "Nicholas Wilson",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Ken Yoshida",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Daisuke Ito",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Keiko Matsumoto",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Jim ENRIGHT",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "James L. Ratcliff",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Sally A. Cunningham",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Nir Sterer",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Wei Liu",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Feng Zhang",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Michael Moshe PEREZ DAVIDI",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Daisuke Takahashi",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Michael Li",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Ervin Itzchak Weiss",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "David R. Drake",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Elena J. Young",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Yoichi Sakurai",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "David Lickrish",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "cpc": [
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "key": "A61K",
+          "value": 500,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "key": "A61P",
+          "value": 333,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "key": "A61Q",
+          "value": 333,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "key": "G06F",
+          "value": 333,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "key": "Y02A",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "G06T",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "G03G",
+          "value": 166,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

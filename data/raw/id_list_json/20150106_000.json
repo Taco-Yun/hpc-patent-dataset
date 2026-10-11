@@ -1,0 +1,706 @@
+{
+  "results": {
+    "total_num_results": 5,
+    "total_num_pages": 1,
+    "many_results": false,
+    "num_page": 0,
+    "cluster": [
+      {
+        "result": [
+          {
+            "id": "patent/US9771549B2/en",
+            "rank": 0,
+            "patent": {
+              "title": " Cleansing composition containing oligodynamic metal and efficacy enhancing &amp;hellip;",
+              "snippet": " FIELD OF THE INVENTION The invention relates to the field of antimicrobial compositions containing oligodynamic metal, particularly silver. In particular, it relates to antimicrobial soap bars. BACKGROUND OF THE INVENTION Global demand for antimicrobial cleansing compositions is on the rise.",
+              "priority_date": "2014-01-29",
+              "filing_date": "2015-01-06",
+              "grant_date": "2017-09-26",
+              "publication_date": "2017-09-26",
+              "inventor": "Ajit Manohar Agarkhed",
+              "assignee": "Conopco, Inc.",
+              "publication_number": "US9771549B2",
+              "language": "en",
+              "thumbnail": "",
+              "pdf": "36/a4/b1/430e616b537995/US9771549.pdf",
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "WO",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "EP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CN",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "JP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "AR",
+                      "best_patent_stage": {
+                        "state": "UNKNOWN"
+                      }
+                    },
+                    {
+                      "country_code": "BR",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CA",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "DE",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "EA",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "MX",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "SG",
+                      "best_patent_stage": {
+                        "state": "UNKNOWN"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US9988929B2/en",
+            "rank": 1,
+            "patent": {
+              "title": " Borescope plug for gas turbine engine",
+              "snippet": " 30 . An exemplary reduction transmission is an epicyclic transmission, namely a planetary or star gear system. The high spool 32 includes an outer shaft 50 that interconnects a high pressure compressor (“&lt;b&gt;HPC&lt;/b&gt;”) 52 and high pressure turbine (“HPT”) 54 . A combustor 56 is arranged between the &lt;b&gt;HPC&lt;/b&gt; 52 and &amp;hellip;",
+              "priority_date": "2015-01-06",
+              "filing_date": "2015-01-06",
+              "grant_date": "2018-06-05",
+              "publication_date": "2018-06-05",
+              "inventor": "Darren M Smith",
+              "assignee": "United Technologies Corporation",
+              "publication_number": "US9988929B2",
+              "language": "en",
+              "thumbnail": "c4/0a/96/1c846c038cba71/US09988929-20180605-D00000.png",
+              "pdf": "42/81/7c/7a48b6c6d544c6/US9988929.pdf",
+              "figures": [
+                {
+                  "thumbnail": "2d/ff/ef/9df4ad6b818b00/US09988929-20180605-D00000.png",
+                  "full": "92/94/9c/0f22340cc2ca1e/US09988929-20180605-D00000.png"
+                },
+                {
+                  "thumbnail": "4e/c2/c0/04e25696f217fe/US09988929-20180605-D00001.png",
+                  "full": "76/3c/a2/e6cddac028fb5b/US09988929-20180605-D00001.png"
+                },
+                {
+                  "thumbnail": "49/7e/61/3f9818dbbf42e7/US09988929-20180605-D00002.png",
+                  "full": "54/01/24/3d1e393b67bf9a/US09988929-20180605-D00002.png"
+                },
+                {
+                  "thumbnail": "32/29/f9/f72da8b079ddf9/US09988929-20180605-D00003.png",
+                  "full": "21/90/39/ef4541f53812f8/US09988929-20180605-D00003.png"
+                },
+                {
+                  "thumbnail": "cb/74/3c/3190c3000e202e/US09988929-20180605-D00004.png",
+                  "full": "3a/26/17/9340880b9f369c/US09988929-20180605-D00004.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US10214545B2/en",
+            "rank": 2,
+            "patent": {
+              "title": " Amido-substituted imidazopyridazines useful in the treatment of hyper- &amp;hellip;",
+              "snippet": " The present invention relates to amido-substituted imidazopyridazine compounds of general formula (I): in which A, E, R2, R3, R4 and n are as defined in the claims, to methods of preparing said compounds, to intermediate compounds useful for preparing said compounds, to pharmaceutical compositions &amp;hellip;",
+              "priority_date": "2014-01-09",
+              "filing_date": "2015-01-06",
+              "grant_date": "2019-02-26",
+              "publication_date": "2019-02-26",
+              "inventor": "Volker Schulze",
+              "assignee": "Bayer Pharma Aktiengesellschaft",
+              "publication_number": "US10214545B2",
+              "language": "en",
+              "thumbnail": "",
+              "pdf": "a6/68/07/ef7dd4e5ba7857/US10214545.pdf",
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "WO",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "EP",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CN",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "JP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CA",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US9340515B2/en",
+            "rank": 3,
+            "patent": {
+              "title": " Pure erlotinib",
+              "snippet": " The present invention relates to processes for the preparation of erlotinib and salts and polymorphs thereof preparable by said processes, to medical uses of said erlotinib, salts and polymorphs, and to pharmaceutical compositions comprising the same.",
+              "priority_date": "2010-07-23",
+              "filing_date": "2015-01-06",
+              "grant_date": "2016-05-17",
+              "publication_date": "2016-05-17",
+              "inventor": "Vinayak Govind Gore",
+              "assignee": "Generics (Uk) Limited",
+              "publication_number": "US9340515B2",
+              "language": "en",
+              "thumbnail": "",
+              "pdf": "64/20/dd/0620270a16addf/US9340515.pdf",
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "WO",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "EP",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CN",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "JP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "AU",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CA",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "NZ",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US9889104B2/en",
+            "rank": 4,
+            "patent": {
+              "title": " Agent for treating diabetes",
+              "snippet": " The present invention provides a prophylactic and/or therapeutic drug for diabetes, which contains 8-[2-(2-pentyl-cyclopropylmethyl)-cyclopropyl]-octanoic acid (DCP-LA) as an active ingredient, particularly a prophylactic and/or therapeutic drug for diabetes, which promotes sugar intake into the &amp;hellip;",
+              "priority_date": "2014-01-07",
+              "filing_date": "2015-01-06",
+              "grant_date": "2018-02-13",
+              "publication_date": "2018-02-13",
+              "inventor": "Tomoyuki Nishizaki",
+              "assignee": "Nishizaki Bioinformation Research Institute",
+              "publication_number": "US9889104B2",
+              "language": "en",
+              "thumbnail": "e9/cb/a1/40ca1b36d5cec1/US09889104-20180213-D00001.png",
+              "pdf": "42/79/2c/d9381697d67435/US9889104.pdf",
+              "figures": [
+                {
+                  "thumbnail": "fd/8f/c4/4e093091e61e0a/US09889104-20180213-D00001.png",
+                  "full": "b5/c0/bb/d2d2dd32ebde10/US09889104-20180213-D00001.png"
+                },
+                {
+                  "thumbnail": "c4/d9/db/c291b7f4e2b324/US09889104-20180213-D00002.png",
+                  "full": "6f/4c/0a/dcc7de0797b982/US09889104-20180213-D00002.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "WO",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "EP",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "JP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          }
+        ]
+      }
+    ],
+    "chem_exhausted": false,
+    "summary": {
+      "assignee": [
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "key": "Conopco, Inc.",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "United Technologies Corporation",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Bayer Pharma Aktiengesellschaft",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Generics (Uk) Limited",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Nishizaki Bioinformation Research Institute",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "inventor": [
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "key": "Ulf Bömer",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Knut Eis",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Kirstin Petersen",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Darren M Smith",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Vinayak Govind Gore",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Madhav Jadhav",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Nitish Kumar",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Ludwig Zorn",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Detlev Sülzle",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Tomoyuki Nishizaki",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Volker Schulze",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Ajit Manohar Agarkhed",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Divya Paruchuri",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Antje Margret Wengner",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Anilkumar Tripathi",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Florian Puehler",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Philip Lienau",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "cpc": [
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "key": "A61K",
+          "value": 600,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "key": "A61P",
+          "value": 600,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "key": "C07D",
+          "value": 400,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "key": "F05D",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "G02B",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "C11D",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "F01D",
+          "value": 200,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

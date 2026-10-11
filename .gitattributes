@@ -1,0 +1,3 @@
+# Sample data (patent HTML pages, JSON, CSV) is not source code:
+# keep it out of GitHub's language statistics.
+data/** linguist-vendored

@@ -1,0 +1,1653 @@
+{
+  "results": {
+    "total_num_results": 11,
+    "total_num_pages": 2,
+    "many_results": false,
+    "num_page": 0,
+    "cluster": [
+      {
+        "result": [
+          {
+            "id": "patent/US9208240B1/en",
+            "rank": 0,
+            "patent": {
+              "title": " Implementation of a web scale data fabric",
+              "snippet": " wherein the co-processor provides computation capacity via at least one of &lt;b&gt;high performance computing&lt;/b&gt; (&lt;b&gt;HPC&lt;/b&gt;) and many-task computing (MTC). 20. The method of claim 19 , wherein the &lt;b&gt;high performance computing&lt;/b&gt; (&lt;b&gt;HPC&lt;/b&gt;) provides large computing power measured in teraflops over short periods of time &amp;hellip;",
+              "priority_date": "2013-03-15",
+              "filing_date": "2015-01-21",
+              "grant_date": "2015-12-08",
+              "publication_date": "2015-12-08",
+              "inventor": "Alex Anton",
+              "assignee": "State Farm Mutual Automobile Insurance Company",
+              "publication_number": "US9208240B1",
+              "language": "en",
+              "thumbnail": "37/90/1c/12cf8b13641e4e/US09208240-20151208-D00000.png",
+              "pdf": "6c/8c/3a/20fc2b7035c627/US9208240.pdf",
+              "figures": [
+                {
+                  "thumbnail": "79/ce/7b/2d674d07a42f85/US09208240-20151208-D00000.png",
+                  "full": "f4/04/3b/afe1b3aef13b8a/US09208240-20151208-D00000.png"
+                },
+                {
+                  "thumbnail": "3f/01/37/daf6c43aea92ec/US09208240-20151208-D00001.png",
+                  "full": "97/82/2e/8dd651140091d9/US09208240-20151208-D00001.png"
+                },
+                {
+                  "thumbnail": "88/67/7a/24bbdbcc851822/US09208240-20151208-D00002.png",
+                  "full": "80/90/17/122220b45d10ea/US09208240-20151208-D00002.png"
+                },
+                {
+                  "thumbnail": "1d/06/f6/d5aa468f24dd31/US09208240-20151208-D00003.png",
+                  "full": "ba/f6/df/4130a3c388709e/US09208240-20151208-D00003.png"
+                },
+                {
+                  "thumbnail": "28/be/a8/a50fe5a8708d57/US09208240-20151208-D00004.png",
+                  "full": "b1/d6/04/b287446eafa6fb/US09208240-20151208-D00004.png"
+                },
+                {
+                  "thumbnail": "2a/e4/a4/158e1909a9cb1d/US09208240-20151208-D00005.png",
+                  "full": "29/b0/c6/4ed51a5a3cc442/US09208240-20151208-D00005.png"
+                },
+                {
+                  "thumbnail": "2c/f0/3b/e47984e0b8f7bb/US09208240-20151208-D00006.png",
+                  "full": "75/38/8e/0082d59aee489c/US09208240-20151208-D00006.png"
+                },
+                {
+                  "thumbnail": "91/32/48/775c2eafdce637/US09208240-20151208-D00007.png",
+                  "full": "cf/a9/49/74f5c5498d6ceb/US09208240-20151208-D00007.png"
+                },
+                {
+                  "thumbnail": "3f/0f/ad/a8ecafe3c001cc/US09208240-20151208-D00008.png",
+                  "full": "c1/08/11/2a41124a412aba/US09208240-20151208-D00008.png"
+                },
+                {
+                  "thumbnail": "8e/44/54/dbb0cae2b90a6a/US09208240-20151208-D00009.png",
+                  "full": "d2/69/5a/b55b469a268f00/US09208240-20151208-D00009.png"
+                },
+                {
+                  "thumbnail": "72/43/d3/1a93a5362cf7be/US09208240-20151208-D00010.png",
+                  "full": "1c/65/41/ee33198396b8fd/US09208240-20151208-D00010.png"
+                },
+                {
+                  "thumbnail": "eb/2a/02/d27b253d6cca65/US09208240-20151208-D00011.png",
+                  "full": "18/15/20/a441a7c69d758d/US09208240-20151208-D00011.png"
+                },
+                {
+                  "thumbnail": "44/90/31/39951e80c42522/US09208240-20151208-D00012.png",
+                  "full": "88/f5/73/42c8651ed950c8/US09208240-20151208-D00012.png"
+                },
+                {
+                  "thumbnail": "5b/94/34/cce912f0e4d309/US09208240-20151208-D00013.png",
+                  "full": "02/83/6d/25cd1310a8df4d/US09208240-20151208-D00013.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US9756874B2/en",
+            "rank": 1,
+            "patent": {
+              "title": " Masticable ingestible product and communication system therefor",
+              "snippet": " An apparatus includes a food product, at least one ingestible device associated with the food product to communicate information and at least one coating material surrounding the at least one ingestible device is disclosed. The ingestible device is associated with an ingestible medication to be &amp;hellip;",
+              "priority_date": "2011-07-11",
+              "filing_date": "2015-01-21",
+              "grant_date": "2017-09-12",
+              "publication_date": "2017-09-12",
+              "inventor": "Lawrence Arne",
+              "assignee": "Proteus Digital Health, Inc.",
+              "publication_number": "US9756874B2",
+              "language": "en",
+              "thumbnail": "d7/11/76/e7487b3cd153d0/US09756874-20170912-D00000.png",
+              "pdf": "34/81/00/def3e8d57875bb/US9756874.pdf",
+              "figures": [
+                {
+                  "thumbnail": "25/c9/c0/3b997be1389874/US09756874-20170912-D00000.png",
+                  "full": "16/90/c7/35f9f24612289d/US09756874-20170912-D00000.png"
+                },
+                {
+                  "thumbnail": "b2/7a/b0/5be545ddbc46fa/US09756874-20170912-D00001.png",
+                  "full": "cf/27/ec/766d42e4e6329d/US09756874-20170912-D00001.png"
+                },
+                {
+                  "thumbnail": "77/77/fe/6cf19f5b20e499/US09756874-20170912-D00002.png",
+                  "full": "f6/6e/5f/bff3e2fac8ae5f/US09756874-20170912-D00002.png"
+                },
+                {
+                  "thumbnail": "25/96/8f/a748acf3b873d2/US09756874-20170912-D00003.png",
+                  "full": "86/98/a7/cd7dde8156a4ba/US09756874-20170912-D00003.png"
+                },
+                {
+                  "thumbnail": "20/2e/c3/65846e1afe2180/US09756874-20170912-D00004.png",
+                  "full": "ef/d2/f9/d9f3b1e951a985/US09756874-20170912-D00004.png"
+                },
+                {
+                  "thumbnail": "77/6f/b3/83561ba39c641a/US09756874-20170912-D00005.png",
+                  "full": "22/13/5a/8c4a3dc5b49a56/US09756874-20170912-D00005.png"
+                },
+                {
+                  "thumbnail": "91/d7/c9/2bbc6122a1ab9c/US09756874-20170912-D00006.png",
+                  "full": "bf/65/75/473b90a42ca164/US09756874-20170912-D00006.png"
+                },
+                {
+                  "thumbnail": "6a/54/9e/69ad81ed8d2a42/US09756874-20170912-D00007.png",
+                  "full": "78/ab/86/3cd4b7952d9064/US09756874-20170912-D00007.png"
+                },
+                {
+                  "thumbnail": "80/c6/ed/d4e5a256583201/US09756874-20170912-D00008.png",
+                  "full": "35/76/2c/4e544a8ed040b1/US09756874-20170912-D00008.png"
+                },
+                {
+                  "thumbnail": "cd/f9/b5/c9638e8630673b/US09756874-20170912-D00009.png",
+                  "full": "cc/20/83/fbfa10ed6ea5f6/US09756874-20170912-D00009.png"
+                },
+                {
+                  "thumbnail": "ec/b3/7f/9738918971ba93/US09756874-20170912-D00010.png",
+                  "full": "ba/82/cf/6fe0fea72aa0df/US09756874-20170912-D00010.png"
+                },
+                {
+                  "thumbnail": "05/34/50/43f0f1c0a21d96/US09756874-20170912-D00011.png",
+                  "full": "2f/49/ef/f3ea057c3298c3/US09756874-20170912-D00011.png"
+                },
+                {
+                  "thumbnail": "6a/80/7e/3c271357ad456e/US09756874-20170912-D00012.png",
+                  "full": "a7/68/37/c1bfb5f012318d/US09756874-20170912-D00012.png"
+                },
+                {
+                  "thumbnail": "f3/a3/af/38be46add7ccf1/US09756874-20170912-D00013.png",
+                  "full": "88/74/64/baa49fe6eda726/US09756874-20170912-D00013.png"
+                },
+                {
+                  "thumbnail": "9e/69/73/d89d792c176cf7/US09756874-20170912-D00014.png",
+                  "full": "64/b6/80/82dacb23b6dae4/US09756874-20170912-D00014.png"
+                },
+                {
+                  "thumbnail": "91/bf/49/a1ba9ae1d0df40/US09756874-20170912-D00015.png",
+                  "full": "22/df/2c/09efd530340032/US09756874-20170912-D00015.png"
+                },
+                {
+                  "thumbnail": "27/be/19/096a62b7daf5e3/US09756874-20170912-D00016.png",
+                  "full": "1b/13/b3/3532141fe4fcc6/US09756874-20170912-D00016.png"
+                },
+                {
+                  "thumbnail": "fe/8f/7f/835f532e5cdc81/US09756874-20170912-D00017.png",
+                  "full": "ac/78/7d/8fa99191057163/US09756874-20170912-D00017.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US9573059B2/en",
+            "rank": 2,
+            "patent": {
+              "title": " Streaming interactive video integrated with recorded video segments",
+              "snippet": " A method comprising executing a program on a server of a server center that generates and streams a user page in the form of streaming interactive video on a display of a user computer connected to the server via the Internet, the user page including a plurality of video windows, one or more of &amp;hellip;",
+              "priority_date": "2002-12-10",
+              "filing_date": "2015-01-21",
+              "grant_date": "2017-02-21",
+              "publication_date": "2017-02-21",
+              "inventor": "Stephen G. Perlman",
+              "assignee": "Sony Interactive Entertainment America Llc",
+              "publication_number": "US9573059B2",
+              "language": "en",
+              "thumbnail": "9c/db/d5/98038f61ca7087/US09573059-20170221-D00000.png",
+              "pdf": "58/bc/51/e69f1003e2c9a0/US9573059.pdf",
+              "figures": [
+                {
+                  "thumbnail": "40/72/dc/2b4a8c52a4c8b6/US09573059-20170221-D00000.png",
+                  "full": "90/a6/d1/31b8d3dbdabcc9/US09573059-20170221-D00000.png"
+                },
+                {
+                  "thumbnail": "21/b5/75/3f9f99c3b4b21f/US09573059-20170221-D00001.png",
+                  "full": "2c/09/20/1910f77cf95f2d/US09573059-20170221-D00001.png"
+                },
+                {
+                  "thumbnail": "24/9b/cd/6c81082c0a1c55/US09573059-20170221-D00002.png",
+                  "full": "aa/e4/a9/a31b85a7b2f6dc/US09573059-20170221-D00002.png"
+                },
+                {
+                  "thumbnail": "31/99/89/a2f19466f9a075/US09573059-20170221-D00003.png",
+                  "full": "9e/e6/b5/d621eaecf91be9/US09573059-20170221-D00003.png"
+                },
+                {
+                  "thumbnail": "35/aa/00/3c2f20050246a1/US09573059-20170221-D00004.png",
+                  "full": "af/77/6d/d1f13c1598fd9d/US09573059-20170221-D00004.png"
+                },
+                {
+                  "thumbnail": "6f/93/20/20bbeb59bec354/US09573059-20170221-D00005.png",
+                  "full": "3b/e0/7f/c97e0bacb9f263/US09573059-20170221-D00005.png"
+                },
+                {
+                  "thumbnail": "06/fa/f2/88a9200fe68bc8/US09573059-20170221-D00006.png",
+                  "full": "29/36/32/fbd7a821105173/US09573059-20170221-D00006.png"
+                },
+                {
+                  "thumbnail": "66/45/58/244a3c6cb4480d/US09573059-20170221-D00007.png",
+                  "full": "75/53/66/84e78c70df898a/US09573059-20170221-D00007.png"
+                },
+                {
+                  "thumbnail": "1e/89/5e/de20b2edcdc3a9/US09573059-20170221-D00008.png",
+                  "full": "a3/4e/70/6d3db8055930fb/US09573059-20170221-D00008.png"
+                },
+                {
+                  "thumbnail": "0c/e2/bf/bb3b186249bc56/US09573059-20170221-D00009.png",
+                  "full": "0a/99/11/ee242f90c05a85/US09573059-20170221-D00009.png"
+                },
+                {
+                  "thumbnail": "58/68/52/519a51fb3f7c82/US09573059-20170221-D00010.png",
+                  "full": "d6/4e/ac/0476473b7aca1d/US09573059-20170221-D00010.png"
+                },
+                {
+                  "thumbnail": "1b/ea/04/a6924b6d80e10d/US09573059-20170221-D00011.png",
+                  "full": "e2/07/38/c6ff57eb4be365/US09573059-20170221-D00011.png"
+                },
+                {
+                  "thumbnail": "06/06/33/2e3dd0d6e45306/US09573059-20170221-D00012.png",
+                  "full": "cf/f6/a5/0dd4047b01b891/US09573059-20170221-D00012.png"
+                },
+                {
+                  "thumbnail": "20/a5/07/4a29236b29c894/US09573059-20170221-D00013.png",
+                  "full": "84/f6/02/2e863c7b038679/US09573059-20170221-D00013.png"
+                },
+                {
+                  "thumbnail": "57/5f/b6/1fdd4778f4a3ee/US09573059-20170221-D00014.png",
+                  "full": "21/8c/2a/be97d78cf4e3c9/US09573059-20170221-D00014.png"
+                },
+                {
+                  "thumbnail": "46/26/c2/4e4efcc0e000af/US09573059-20170221-D00015.png",
+                  "full": "b9/03/da/51660c50d2f1ca/US09573059-20170221-D00015.png"
+                },
+                {
+                  "thumbnail": "b1/d7/34/ec53a1af39a49f/US09573059-20170221-D00016.png",
+                  "full": "c6/3a/eb/921e3ac66bb9c7/US09573059-20170221-D00016.png"
+                },
+                {
+                  "thumbnail": "cb/4c/47/d834d1eb9023f5/US09573059-20170221-D00017.png",
+                  "full": "35/2f/a3/e50b094d99c650/US09573059-20170221-D00017.png"
+                },
+                {
+                  "thumbnail": "c6/9b/a5/fb28533d6b1ab0/US09573059-20170221-D00018.png",
+                  "full": "96/34/20/d89d1809383aba/US09573059-20170221-D00018.png"
+                },
+                {
+                  "thumbnail": "4f/ca/8d/2a04a9d82c17e8/US09573059-20170221-D00019.png",
+                  "full": "19/7a/11/b78520779be457/US09573059-20170221-D00019.png"
+                },
+                {
+                  "thumbnail": "6f/1b/0b/b1e7353bab0506/US09573059-20170221-D00020.png",
+                  "full": "aa/fc/00/37392d7b6d6e43/US09573059-20170221-D00020.png"
+                },
+                {
+                  "thumbnail": "54/f9/3a/78870ae0d590d9/US09573059-20170221-D00021.png",
+                  "full": "a4/c4/b3/323bf1a9fb0550/US09573059-20170221-D00021.png"
+                },
+                {
+                  "thumbnail": "29/ab/3d/50f38642ecdaf0/US09573059-20170221-D00022.png",
+                  "full": "fe/18/41/5db2142cc38f1a/US09573059-20170221-D00022.png"
+                },
+                {
+                  "thumbnail": "36/04/01/e3fb9d60d7c5c7/US09573059-20170221-D00023.png",
+                  "full": "0e/c5/71/cb4513147f3242/US09573059-20170221-D00023.png"
+                },
+                {
+                  "thumbnail": "66/cb/70/64ac3981435bd6/US09573059-20170221-D00024.png",
+                  "full": "da/3b/94/0ed8b00fbce474/US09573059-20170221-D00024.png"
+                },
+                {
+                  "thumbnail": "06/aa/c0/b4af1d60a98000/US09573059-20170221-D00025.png",
+                  "full": "9f/c9/30/0042aad056bc27/US09573059-20170221-D00025.png"
+                },
+                {
+                  "thumbnail": "03/1d/eb/5a997141d00b5d/US09573059-20170221-D00026.png",
+                  "full": "f1/c7/4b/8041bad2f7b333/US09573059-20170221-D00026.png"
+                },
+                {
+                  "thumbnail": "c0/ff/ab/40f94cf0aff7b8/US09573059-20170221-D00027.png",
+                  "full": "8c/76/c4/480bf2be476e58/US09573059-20170221-D00027.png"
+                },
+                {
+                  "thumbnail": "47/fb/5a/636aac4c3cf7b3/US09573059-20170221-D00028.png",
+                  "full": "2d/4b/00/b2643f26196610/US09573059-20170221-D00028.png"
+                },
+                {
+                  "thumbnail": "ed/a4/2d/889f53a05627f7/US09573059-20170221-D00029.png",
+                  "full": "92/80/a5/fb9bcaae4a12a8/US09573059-20170221-D00029.png"
+                },
+                {
+                  "thumbnail": "1d/cc/ef/9982a0707fb09d/US09573059-20170221-D00030.png",
+                  "full": "40/c6/4c/6beb0b4da12a41/US09573059-20170221-D00030.png"
+                },
+                {
+                  "thumbnail": "8a/43/94/a5067fcd6fa11d/US09573059-20170221-D00031.png",
+                  "full": "61/51/29/f894c27560420d/US09573059-20170221-D00031.png"
+                },
+                {
+                  "thumbnail": "c2/e8/85/d207b2a2739e5d/US09573059-20170221-D00032.png",
+                  "full": "92/f0/f0/bcd2bebbc5d9e8/US09573059-20170221-D00032.png"
+                },
+                {
+                  "thumbnail": "48/bb/7c/1e25af62c5243d/US09573059-20170221-D00033.png",
+                  "full": "a5/0a/d0/43136721fa7589/US09573059-20170221-D00033.png"
+                },
+                {
+                  "thumbnail": "20/02/fa/60fcb5d8a6a890/US09573059-20170221-D00034.png",
+                  "full": "61/0b/cc/2078ed68ce3ffc/US09573059-20170221-D00034.png"
+                },
+                {
+                  "thumbnail": "25/87/00/dd9d0a92c51972/US09573059-20170221-D00035.png",
+                  "full": "1f/2a/76/1c8ae2900d3b91/US09573059-20170221-D00035.png"
+                },
+                {
+                  "thumbnail": "40/fa/a8/43736b3fbf158f/US09573059-20170221-D00036.png",
+                  "full": "24/c2/77/3542a97d1b1946/US09573059-20170221-D00036.png"
+                },
+                {
+                  "thumbnail": "c2/f6/b9/4c2cb02cd6ad6b/US09573059-20170221-D00037.png",
+                  "full": "88/36/ec/01e585aba399b0/US09573059-20170221-D00037.png"
+                },
+                {
+                  "thumbnail": "0b/ca/3a/dd7047af69c36e/US09573059-20170221-D00038.png",
+                  "full": "7a/81/6a/081468e7506c01/US09573059-20170221-D00038.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "WO",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "EP",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CN",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "JP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "KR",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "AU",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CA",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "NZ",
+                      "best_patent_stage": {
+                        "state": "UNKNOWN"
+                      }
+                    },
+                    {
+                      "country_code": "RU",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US9440970B2/en",
+            "rank": 3,
+            "patent": {
+              "title": " Pyrazole derivative",
+              "snippet": " It has been desired to develop a pharmaceutical composition, which is used in agents for preventing and/or treating various diseases related to PDE10 (e.g. mental disorder and neurodegenerative disorder). The present invention provides: compounds having PDE10 inhibitory effect, in particular, &amp;hellip;",
+              "priority_date": "2013-02-27",
+              "filing_date": "2015-01-21",
+              "grant_date": "2016-09-13",
+              "publication_date": "2016-09-13",
+              "inventor": "Akihiro Okano",
+              "assignee": "Mochida Pharmaceutical Co., Ltd.",
+              "publication_number": "US9440970B2",
+              "language": "en",
+              "thumbnail": "",
+              "pdf": "5f/00/d4/9a839f14674ee4/US9440970.pdf",
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "WO",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "EP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CN",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "JP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "KR",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "AU",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "BR",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CA",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "ES",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "HU",
+                      "best_patent_stage": {
+                        "state": "UNKNOWN"
+                      }
+                    },
+                    {
+                      "country_code": "MX",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "NZ",
+                      "best_patent_stage": {
+                        "state": "UNKNOWN"
+                      }
+                    },
+                    {
+                      "country_code": "PT",
+                      "best_patent_stage": {
+                        "state": "UNKNOWN"
+                      }
+                    },
+                    {
+                      "country_code": "RU",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "TR",
+                      "best_patent_stage": {
+                        "state": "UNKNOWN"
+                      }
+                    },
+                    {
+                      "country_code": "ZA",
+                      "best_patent_stage": {
+                        "state": "UNKNOWN"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US10758622B2/en",
+            "rank": 4,
+            "patent": {
+              "title": " Self-emulsifying composition of omega-3 fatty acid",
+              "snippet": " A self-emulsifying composition contains: 70 to 90% by weight of at least one compound selected from the group consisting of ω3 polyunsaturated fatty acids and their pharmaceutically acceptable salts and esters; 0.5 to 6% by weight of water; 1 to 29% by weight of a polyoxyethylene sorbitan fatty &amp;hellip;",
+              "priority_date": "2015-01-21",
+              "filing_date": "2015-01-21",
+              "grant_date": "2020-09-01",
+              "publication_date": "2020-09-01",
+              "inventor": "Hiromitsu Ito",
+              "assignee": "Mochida Pharmaceuticals Co., Ltd.",
+              "publication_number": "US10758622B2",
+              "language": "en",
+              "thumbnail": "",
+              "pdf": "6b/bc/67/50be743fb507a5/US10758622.pdf",
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "WO",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "EP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CN",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "JP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "KR",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CA",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "HK",
+                      "best_patent_stage": {
+                        "state": "UNKNOWN"
+                      }
+                    },
+                    {
+                      "country_code": "MX",
+                      "best_patent_stage": {
+                        "state": "UNKNOWN"
+                      }
+                    },
+                    {
+                      "country_code": "MY",
+                      "best_patent_stage": {
+                        "state": "UNKNOWN"
+                      }
+                    },
+                    {
+                      "country_code": "PH",
+                      "best_patent_stage": {
+                        "state": "UNKNOWN"
+                      }
+                    },
+                    {
+                      "country_code": "RU",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "SG",
+                      "best_patent_stage": {
+                        "state": "UNKNOWN"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US10004690B2/en",
+            "rank": 5,
+            "patent": {
+              "title": " Administrable microparticles in vivo through medical conduit",
+              "snippet": " Alginate 1500 — — — — Chitosan — 1500 — — — Hyaluronic acid — — 1500 — — Dextran — — — 1500 — Hydroxyethyl cellulose — — — — 1500 L-&lt;b&gt;HPC&lt;/b&gt; (LH11) 75 75 75 75 75 Lactose #100 300 300 300 300 300 MCC 550 550 550 550 550 PVP K30 50 50 50 50 50 MG-ST 25 25 25 25 25 Food coloring 8.5 8.5 8.5 8.5 8.5 &amp;hellip;",
+              "priority_date": "2014-01-21",
+              "filing_date": "2015-01-21",
+              "grant_date": "2018-06-26",
+              "publication_date": "2018-06-26",
+              "inventor": "Eunhye LEE",
+              "assignee": "Utah-Inha Dds &amp; Advanced Therapeutics Research Center",
+              "publication_number": "US10004690B2",
+              "language": "en",
+              "thumbnail": "55/2d/ee/d620a2d5d6599b/US10004690-20180626-D00000.png",
+              "pdf": "0d/e9/20/b776fc3eaa2ca7/US10004690.pdf",
+              "figures": [
+                {
+                  "thumbnail": "29/aa/17/baccdc29dadc81/US10004690-20180626-D00000.png",
+                  "full": "be/b5/86/9a9f7912cb6513/US10004690-20180626-D00000.png"
+                },
+                {
+                  "thumbnail": "af/d2/1e/bdc96872973fab/US10004690-20180626-D00001.png",
+                  "full": "34/2e/8f/2f37d67b17437d/US10004690-20180626-D00001.png"
+                },
+                {
+                  "thumbnail": "99/51/26/6eade8903e61ff/US10004690-20180626-D00002.png",
+                  "full": "bc/37/eb/29a55d64deb8b5/US10004690-20180626-D00002.png"
+                },
+                {
+                  "thumbnail": "16/ac/55/c9abdb2d89b5fb/US10004690-20180626-D00003.png",
+                  "full": "6e/09/ba/a24a021f6d764f/US10004690-20180626-D00003.png"
+                },
+                {
+                  "thumbnail": "53/40/15/ed0b74a1efa971/US10004690-20180626-D00004.png",
+                  "full": "26/6f/9d/645e13f7cf2181/US10004690-20180626-D00004.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "WO",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "EP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CN",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "JP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "KR",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "ES",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "PL",
+                      "best_patent_stage": {
+                        "state": "UNKNOWN"
+                      }
+                    },
+                    {
+                      "country_code": "PT",
+                      "best_patent_stage": {
+                        "state": "UNKNOWN"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US10662193B2/en",
+            "rank": 6,
+            "patent": {
+              "title": " Carbazole and carboline compounds for use in the diagnosis, treatment, &amp;hellip;",
+              "snippet": " The present invention relates to novel compounds that can be employed in the diagnosis, treatment, alleviation or prevention of a group of disorders and abnormalities associated with amyloid proteins and amyloid-like proteins, such as Alzheimer&amp;#39;s disease. Precursors for the preparation of the &amp;hellip;",
+              "priority_date": "2014-01-21",
+              "filing_date": "2015-01-21",
+              "grant_date": "2020-05-26",
+              "publication_date": "2020-05-26",
+              "inventor": "Heiko Kroth",
+              "assignee": "Ac Immune Sa",
+              "publication_number": "US10662193B2",
+              "language": "en",
+              "thumbnail": "13/c1/f9/199b88ceab42da/US10662193-20200526-D00001.png",
+              "pdf": "7f/d2/d5/914959712bdcdd/US10662193.pdf",
+              "figures": [
+                {
+                  "thumbnail": "0b/41/9a/3387ce290665d0/US10662193-20200526-D00001.png",
+                  "full": "e9/29/c8/c768d3fbfaaa1a/US10662193-20200526-D00001.png"
+                },
+                {
+                  "thumbnail": "4f/0d/fa/60185cb5c91efc/US10662193-20200526-D00002.png",
+                  "full": "4f/59/b2/5b1df03d2eedbb/US10662193-20200526-D00002.png"
+                },
+                {
+                  "thumbnail": "20/ba/0e/8b595fb2c8e0fd/US10662193-20200526-D00003.png",
+                  "full": "0a/87/4b/1dfbd69fc680a5/US10662193-20200526-D00003.png"
+                },
+                {
+                  "thumbnail": "46/d7/22/f15a6d06c8fc20/US10662193-20200526-D00004.png",
+                  "full": "31/12/62/808b9d4c3d504f/US10662193-20200526-D00004.png"
+                },
+                {
+                  "thumbnail": "39/50/ad/4f3debf8ce6143/US10662193-20200526-D00005.png",
+                  "full": "30/db/73/7b2fad0023cb3f/US10662193-20200526-D00005.png"
+                },
+                {
+                  "thumbnail": "b7/85/27/1d1b04fc68a1d2/US10662193-20200526-D00006.png",
+                  "full": "68/8c/0f/fb3c9905bbb8cd/US10662193-20200526-D00006.png"
+                },
+                {
+                  "thumbnail": "c5/1a/3a/0ab1d19fe93c1c/US10662193-20200526-D00007.png",
+                  "full": "8b/60/1b/3df13c5978a5f4/US10662193-20200526-D00007.png"
+                },
+                {
+                  "thumbnail": "b8/60/9c/b4a010bfaf5ba6/US10662193-20200526-D00008.png",
+                  "full": "b6/7c/fa/925312d938c776/US10662193-20200526-D00008.png"
+                },
+                {
+                  "thumbnail": "93/a0/cc/cc9ca2991cccbe/US10662193-20200526-D00009.png",
+                  "full": "ee/5d/a4/7a9011a4c6cf0e/US10662193-20200526-D00009.png"
+                },
+                {
+                  "thumbnail": "c4/21/ed/d5c7b7bfd65591/US10662193-20200526-D00010.png",
+                  "full": "8b/6e/a1/8bf9185df2eb31/US10662193-20200526-D00010.png"
+                },
+                {
+                  "thumbnail": "81/c3/24/09110d373ab2df/US10662193-20200526-D00011.png",
+                  "full": "fc/06/b8/24af063a204cd8/US10662193-20200526-D00011.png"
+                },
+                {
+                  "thumbnail": "5d/23/9c/59d834df40efc1/US10662193-20200526-D00012.png",
+                  "full": "e2/30/71/59038dbe38fdfe/US10662193-20200526-D00012.png"
+                },
+                {
+                  "thumbnail": "25/95/63/b722e9c5b7bb67/US10662193-20200526-D00013.png",
+                  "full": "4c/ef/c2/04d87200b8919b/US10662193-20200526-D00013.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "WO",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US10312546B2/en",
+            "rank": 7,
+            "patent": {
+              "title": " Non-aqueous liquid electrolyte for secondary battery and secondary battery",
+              "snippet": " A non-aqueous liquid electrolyte for a secondary battery, containing an electrolyte and a compound (A) represented by any one of formulae (I-1) to (I-3) in an organic solvent: wherein X 1 represents an alkyl group substituted with a halogen atom; Y 1 represents a hydrogen atom or an organic group;",
+              "priority_date": "2012-07-27",
+              "filing_date": "2015-01-21",
+              "grant_date": "2019-06-04",
+              "publication_date": "2019-06-04",
+              "inventor": "Kunihiko Kodama",
+              "assignee": "Fujifilm Corporation",
+              "publication_number": "US10312546B2",
+              "language": "en",
+              "thumbnail": "7c/aa/8f/a02c8c01bc5ece/US10312546-20190604-D00000.png",
+              "pdf": "2e/2a/03/7026e5612ad7f3/US10312546.pdf",
+              "figures": [
+                {
+                  "thumbnail": "52/b1/de/41ae8aa5ca80eb/US10312546-20190604-D00000.png",
+                  "full": "8b/4f/5d/0b9eb1b8fec346/US10312546-20190604-D00000.png"
+                },
+                {
+                  "thumbnail": "fa/cf/4d/7fcd28c410bec2/US10312546-20190604-D00001.png",
+                  "full": "b7/2c/03/aa38e8e43443fc/US10312546-20190604-D00001.png"
+                },
+                {
+                  "thumbnail": "d8/5f/a8/63997b447273e0/US10312546-20190604-D00002.png",
+                  "full": "2c/ab/33/5d39d3a86ea11b/US10312546-20190604-D00002.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "WO",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "JP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US10180057B2/en",
+            "rank": 8,
+            "patent": {
+              "title": " Measuring inter-reservoir cross flow rate through unintended leaks in zonal &amp;hellip;",
+              "snippet": " Crossflow between two adjacent reservoir layers through leaky cement sheaths in offset wells during transient-pressure tests in one of the two reservoir layers is diagnosed and quantified. The obtained measures are determined based on individual well and layer properties. The pressure drawdown in &amp;hellip;",
+              "priority_date": "2015-01-21",
+              "filing_date": "2015-01-21",
+              "grant_date": "2019-01-15",
+              "publication_date": "2019-01-15",
+              "inventor": "Noor M. Anisur Rahman",
+              "assignee": "Saudi Arabian Oil Company",
+              "publication_number": "US10180057B2",
+              "language": "en",
+              "thumbnail": "df/65/72/77fd1ac98a676a/US10180057-20190115-D00000.png",
+              "pdf": "0d/c0/8f/ac31af2a88002d/US10180057.pdf",
+              "figures": [
+                {
+                  "thumbnail": "95/39/32/68d4b1b55acfe6/US10180057-20190115-D00000.png",
+                  "full": "f1/94/73/7304ae951c4233/US10180057-20190115-D00000.png"
+                },
+                {
+                  "thumbnail": "96/cb/f1/2cc3ce175f3fd6/US10180057-20190115-D00001.png",
+                  "full": "27/8f/4a/dd72d32114f7a0/US10180057-20190115-D00001.png"
+                },
+                {
+                  "thumbnail": "da/02/16/1523c4294a0359/US10180057-20190115-D00002.png",
+                  "full": "ff/20/52/f1a6abd73d7395/US10180057-20190115-D00002.png"
+                },
+                {
+                  "thumbnail": "ed/2f/81/7168a0504ff55d/US10180057-20190115-D00003.png",
+                  "full": "1b/bc/fb/7a192629109e95/US10180057-20190115-D00003.png"
+                },
+                {
+                  "thumbnail": "bd/a3/de/0d27a2642e5129/US10180057-20190115-D00004.png",
+                  "full": "92/61/3d/48495dcd9da0c1/US10180057-20190115-D00004.png"
+                },
+                {
+                  "thumbnail": "b6/07/12/b4058541694385/US10180057-20190115-D00005.png",
+                  "full": "e3/06/61/1060dd007fabdd/US10180057-20190115-D00005.png"
+                },
+                {
+                  "thumbnail": "13/b3/67/ea27706af3e6cc/US10180057-20190115-D00006.png",
+                  "full": "07/50/6f/fb3ec4781b5e89/US10180057-20190115-D00006.png"
+                },
+                {
+                  "thumbnail": "43/2d/cf/cd2c049e6cc987/US10180057-20190115-D00007.png",
+                  "full": "48/f1/80/f17ac1198a6f28/US10180057-20190115-D00007.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "WO",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "EP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "SA",
+                      "best_patent_stage": {
+                        "state": "UNKNOWN"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          },
+          {
+            "id": "patent/US9715420B2/en",
+            "rank": 9,
+            "patent": {
+              "title": " String dataflow error detection",
+              "snippet": " BACKGROUND OF THE INVENTION The present invention relates generally to the field of electronic circuits and more particularly to circuits used for string comparison operations. In &lt;b&gt;high performance computing&lt;/b&gt;, being able to validate the correctness of a result is an important function. Frequently, &amp;hellip;",
+              "priority_date": "2015-01-21",
+              "filing_date": "2015-01-21",
+              "grant_date": "2017-07-25",
+              "publication_date": "2017-07-25",
+              "inventor": "James R. Cuffney",
+              "assignee": "International Business Machines Corporation",
+              "publication_number": "US9715420B2",
+              "language": "en",
+              "thumbnail": "0b/97/9b/85338c27cd1671/US09715420-20170725-D00000.png",
+              "pdf": "3e/1e/c0/0b50cd33f89f20/US9715420.pdf",
+              "figures": [
+                {
+                  "thumbnail": "65/23/fc/49e8833baab641/US09715420-20170725-D00000.png",
+                  "full": "1f/43/54/2f3080cfb76152/US09715420-20170725-D00000.png"
+                },
+                {
+                  "thumbnail": "7b/9b/ca/9d871508395f38/US09715420-20170725-D00001.png",
+                  "full": "1a/d6/91/5734113d52997d/US09715420-20170725-D00001.png"
+                },
+                {
+                  "thumbnail": "41/8d/ff/0f630ff21e0ae3/US09715420-20170725-D00002.png",
+                  "full": "07/b1/12/cc88d824295aec/US09715420-20170725-D00002.png"
+                },
+                {
+                  "thumbnail": "e1/c0/3a/4693200a630210/US09715420-20170725-D00003.png",
+                  "full": "9d/90/42/ec567065f5fc80/US09715420-20170725-D00003.png"
+                },
+                {
+                  "thumbnail": "f5/1f/80/c3daf0a95123b2/US09715420-20170725-D00004.png",
+                  "full": "0b/67/ff/7106248d7bd7df/US09715420-20170725-D00004.png"
+                },
+                {
+                  "thumbnail": "6a/5a/dc/cd35f226d3d3d7/US09715420-20170725-D00005.png",
+                  "full": "5a/e3/66/128ce4f4d1db05/US09715420-20170725-D00005.png"
+                },
+                {
+                  "thumbnail": "83/dd/45/00ef0c4969ddc0/US09715420-20170725-D00006.png",
+                  "full": "44/d1/e2/c79a5f11e9a052/US09715420-20170725-D00006.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          }
+        ]
+      }
+    ],
+    "chem_exhausted": false,
+    "summary": {
+      "assignee": [
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 11
+            }
+          ]
+        },
+        {
+          "key": "Life Molecular Imaging Sa",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Ac Immune Sa",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Mochida Pharmaceuticals Co., Ltd.",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Fujifilm Corporation",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Saudi Arabian Oil Company",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "International Business Machines Corporation",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "General Electric Company",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "State Farm Mutual Automobile Insurance Company",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Utah-Inha Dds &amp; Advanced Therapeutics Research Center",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Proteus Digital Health, Inc.",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Sony Interactive Entertainment America Llc",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Mochida Pharmaceutical Co., Ltd.",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "inventor": [
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 11
+            }
+          ]
+        },
+        {
+          "key": "Lawrence Arne",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Zahedeh Hatamkhany",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Stephen G. Perlman",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Eunhye LEE",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Jeffrey Lee Mason",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Benjamin James Schumacher",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Don Haeng Lee",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Heiko Kroth",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Hanno Schieferstein",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Noor M. Anisur Rahman",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "John G. Rell, Jr.",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Mark Zdeblick",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Pascal André René BENDERITTER",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Timothy J. Koprowski",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "James Fitzgerald Bonar",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Robert Leichner",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Raymond Schmidt",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Motoo Yamagata",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "James R. Cuffney",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "cpc": [
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 11
+            }
+          ]
+        },
+        {
+          "key": "A61K",
+          "value": 363,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "key": "A61P",
+          "value": 363,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "key": "H04L",
+          "value": 272,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "key": "A23V",
+          "value": 181,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "key": "C07D",
+          "value": 181,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "key": "G06F",
+          "value": 181,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "key": "A23L",
+          "value": 181,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "key": "Y02E",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "H04N",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "G06K",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "E21B",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "G01V",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "G06Q",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "A23P",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "A63F",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "H04W",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "C07K",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "H03K",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "F04F",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

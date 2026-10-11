@@ -1,0 +1,232 @@
+{
+  "results": {
+    "total_num_results": 1,
+    "total_num_pages": 1,
+    "many_results": false,
+    "num_page": 0,
+    "cluster": [
+      {
+        "result": [
+          {
+            "id": "patent/US9433077B2/en",
+            "rank": 0,
+            "patent": {
+              "title": " Substrate device and electric circuit arrangement having first substrate &amp;hellip;",
+              "snippet": "&amp;hellip;  as substrates to provide power and signal communication to and from electronic circuits or devices placed on the printed circuit board. In &lt;b&gt;high performance computing&lt;/b&gt; applications, a high packaging density is desired to improve computational performance and the energy efficiency of such systems.",
+              "priority_date": "2014-02-14",
+              "filing_date": "2015-01-19",
+              "grant_date": "2016-08-30",
+              "publication_date": "2016-08-30",
+              "inventor": "Thomas J. Brunschwiler",
+              "assignee": "International Business Machines Corporation",
+              "publication_number": "US9433077B2",
+              "language": "en",
+              "thumbnail": "4e/43/82/5a40598dbff57e/US09433077-20160830-D00000.png",
+              "pdf": "5d/f4/81/ed6246be152211/US9433077.pdf",
+              "figures": [
+                {
+                  "thumbnail": "c1/dc/4b/694e34cbf81fc4/US09433077-20160830-D00000.png",
+                  "full": "20/54/17/218bd044b107f9/US09433077-20160830-D00000.png"
+                },
+                {
+                  "thumbnail": "f9/eb/30/53659dd5400616/US09433077-20160830-D00001.png",
+                  "full": "aa/d3/af/e6f09469cc6bcd/US09433077-20160830-D00001.png"
+                },
+                {
+                  "thumbnail": "3f/0c/6e/e1efbdffd1b63e/US09433077-20160830-D00002.png",
+                  "full": "6a/ab/a0/1ca1e71a567f62/US09433077-20160830-D00002.png"
+                },
+                {
+                  "thumbnail": "c7/6a/e1/97641198c7059b/US09433077-20160830-D00003.png",
+                  "full": "0b/43/08/a4551b5c26939d/US09433077-20160830-D00003.png"
+                },
+                {
+                  "thumbnail": "5d/e9/73/e6b9c1be185c48/US09433077-20160830-D00004.png",
+                  "full": "d0/12/48/f2ebb081fce7fb/US09433077-20160830-D00004.png"
+                },
+                {
+                  "thumbnail": "2a/d0/e5/5e0ac59aeb8bfd/US09433077-20160830-D00005.png",
+                  "full": "12/3a/18/4fbad9f4f1c17e/US09433077-20160830-D00005.png"
+                },
+                {
+                  "thumbnail": "5f/de/41/1eb2721c303c15/US09433077-20160830-D00006.png",
+                  "full": "14/62/e3/bc8b0382900023/US09433077-20160830-D00006.png"
+                },
+                {
+                  "thumbnail": "fc/13/f4/f404a83284a4ec/US09433077-20160830-D00007.png",
+                  "full": "2b/49/9d/3554a6e8f03430/US09433077-20160830-D00007.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          }
+        ]
+      }
+    ],
+    "chem_exhausted": false,
+    "summary": {
+      "assignee": [
+        {
+          "key": "International Business Machines Corporation",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "inventor": [
+        {
+          "key": "Keiji Matsumoto",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Stefano S. Oggioni",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Gerd Schlottig",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Timo J. Tick",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Jonas Zuercher",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Thomas J. Brunschwiler",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Dominic Gschwend",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "cpc": [
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "H05K",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "H10W",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Y10T",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

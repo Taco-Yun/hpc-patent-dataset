@@ -1,0 +1,664 @@
+{
+  "results": {
+    "total_num_results": 11,
+    "total_num_pages": 2,
+    "many_results": false,
+    "num_page": 1,
+    "cluster": [
+      {
+        "result": [
+          {
+            "id": "patent/US10029218B2/en",
+            "rank": 0,
+            "patent": {
+              "title": " Method and system for a short length jet pump with improved mixing",
+              "snippet": " The embodiments described herein use high-pressure compressor (&lt;b&gt;HPC&lt;/b&gt;) bleed from a fourth stage, relatively low-pressure port and/or tenth stage, relatively high-pressure port of a gas turbine engine compressor for the aircraft environmental control system (ECS) and Wing Anti-Ice (WAI). In the &amp;hellip;",
+              "priority_date": "2015-01-21",
+              "filing_date": "2015-01-21",
+              "grant_date": "2018-07-24",
+              "publication_date": "2018-07-24",
+              "inventor": "Jeffrey Lee Mason",
+              "assignee": "General Electric Company",
+              "publication_number": "US10029218B2",
+              "language": "en",
+              "thumbnail": "0c/5c/ff/781ec99f5c0053/US10029218-20180724-D00000.png",
+              "pdf": "24/2c/30/c68c2fbb5ed7ce/US10029218.pdf",
+              "figures": [
+                {
+                  "thumbnail": "86/db/b8/61f0991843591f/US10029218-20180724-D00000.png",
+                  "full": "df/4d/82/24aeb780a34ee3/US10029218-20180724-D00000.png"
+                },
+                {
+                  "thumbnail": "51/c3/64/84eb6e159e3efb/US10029218-20180724-D00001.png",
+                  "full": "e6/07/6b/6e7b1602d74761/US10029218-20180724-D00001.png"
+                },
+                {
+                  "thumbnail": "3f/53/62/2f80889d85a79f/US10029218-20180724-D00002.png",
+                  "full": "6e/03/48/9e2a51bb517527/US10029218-20180724-D00002.png"
+                },
+                {
+                  "thumbnail": "e1/db/6d/a04dda5dede44e/US10029218-20180724-D00003.png",
+                  "full": "b5/f7/f7/7917d509096d08/US10029218-20180724-D00003.png"
+                },
+                {
+                  "thumbnail": "f2/9f/9b/b5400cc0dbfcab/US10029218-20180724-D00004.png",
+                  "full": "d2/56/b2/6c4fbdb8087eea/US10029218-20180724-D00004.png"
+                },
+                {
+                  "thumbnail": "60/7b/52/2f74cb90ae5578/US10029218-20180724-D00005.png",
+                  "full": "4a/23/81/5a8c149cc061e8/US10029218-20180724-D00005.png"
+                },
+                {
+                  "thumbnail": "e5/ce/36/e58087f69387dc/US10029218-20180724-D00006.png",
+                  "full": "73/94/fc/5d959e97d54e37/US10029218-20180724-D00006.png"
+                },
+                {
+                  "thumbnail": "aa/97/06/db7c9af0ae3e18/US10029218-20180724-D00007.png",
+                  "full": "9f/84/e1/0747c720790166/US10029218-20180724-D00007.png"
+                },
+                {
+                  "thumbnail": "91/3a/d8/0ba9aca7222025/US10029218-20180724-D00008.png",
+                  "full": "d7/b9/af/08701ae94d6085/US10029218-20180724-D00008.png"
+                },
+                {
+                  "thumbnail": "ab/38/e0/3c0ba2bee460bc/US10029218-20180724-D00009.png",
+                  "full": "a4/d3/37/523088648feb51/US10029218-20180724-D00009.png"
+                },
+                {
+                  "thumbnail": "85/a3/e5/6535d341806b49/US10029218-20180724-D00010.png",
+                  "full": "03/30/55/30ba43c3cc4041/US10029218-20180724-D00010.png"
+                }
+              ],
+              "family_metadata": {
+                "aggregated": {
+                  "country_status": [
+                    {
+                      "country_code": "EP",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "US",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CN",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "JP",
+                      "best_patent_stage": {
+                        "state": "ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "BR",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    },
+                    {
+                      "country_code": "CA",
+                      "best_patent_stage": {
+                        "state": "NOT_ACTIVE"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "is_similar_document": false,
+            "entity_matches": {
+              "additional": 0
+            },
+            "measure_matches": {}
+          }
+        ]
+      }
+    ],
+    "chem_exhausted": false,
+    "summary": {
+      "assignee": [
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 11
+            }
+          ]
+        },
+        {
+          "key": "Sony Interactive Entertainment America Llc",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "International Business Machines Corporation",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "General Electric Company",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "State Farm Mutual Automobile Insurance Company",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Saudi Arabian Oil Company",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Utah-Inha Dds &amp; Advanced Therapeutics Research Center",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Ac Immune Sa",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Life Molecular Imaging Sa",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Fujifilm Corporation",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Proteus Digital Health, Inc.",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Mochida Pharmaceutical Co., Ltd.",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Mochida Pharmaceuticals Co., Ltd.",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "inventor": [
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 11
+            }
+          ]
+        },
+        {
+          "key": "Motoo Yamagata",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Tim G. Sanidas",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Raymond Schmidt",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Stephen G. Perlman",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Hanno Schieferstein",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Kunihiko Kodama",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Timothy J. Koprowski",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Patrick M. West, Jr.",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Robert Leichner",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Muneyoshi MAKABE",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Don Haeng Lee",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Young Hwan Park",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Heiko Kroth",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Jér{hacek over (o)}me Molette",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Emanuele Gabellieri",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Wolfgang Froestl",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Alex Anton",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Michael Bernico",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Mark Zdeblick",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "cpc": [
+        {
+          "key": "Total",
+          "value": 1000,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 11
+            }
+          ]
+        },
+        {
+          "key": "A61P",
+          "value": 363,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "key": "A61K",
+          "value": 363,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "key": "H04L",
+          "value": 272,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "key": "C07D",
+          "value": 181,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "key": "A23V",
+          "value": 181,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "key": "A23L",
+          "value": 181,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "key": "G06F",
+          "value": 181,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "key": "G01V",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "A63F",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "C07K",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "H01M",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "E21B",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "H03K",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "F04F",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "H04N",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "Y02E",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "G06K",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "H04W",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "G06Q",
+          "value": 90,
+          "frequency": [
+            {
+              "key": "2013-2016",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
