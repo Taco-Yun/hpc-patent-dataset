@@ -2,7 +2,8 @@
 
 Python scripts that build a patent dataset from [Google Patents](https://patents.google.com/) in five steps:
 search Google Patents one filing date at a time, collect the patent IDs, download each patent page,
-parse the pages, and flatten the result into one CSV file.
+parse the pages, and flatten the result into one CSV file. A sixth step, a Colab notebook in `colab/`, turns
+that CSV file into the released dataset (see [Step 6](#step-6-build-the-released-dataset-on-colab-notebooks-in-colab)).
 
 The default settings reproduce the **HPC dataset**: US granted patents in English that match the query
 `(HPC)` and were **filed** between 2015-01-01 and 2025-12-31. Every setting can be changed on the command line.
@@ -70,6 +71,7 @@ flowchart LR
 | 3 | `src/step3_download_patent_pages.py` | `interim/patent_id_from_{start}_{end}.csv` | `raw/html/{patent_id}.html` | yes (HTTP) |
 | 4 | `src/step4_parse_patent_pages.py` | `raw/html/*.html` | `interim/parsed_data.json` | no (unless `--download-pdf`) |
 | 5 | `src/step5_build_hpc_dataset.py` | `interim/parsed_data.json` | `processed/HPC_15to25_v2.csv` | no |
+| 6 | `colab/step6_patentsum_pipeline.ipynb` (Colab notebook, GPU) | `processed/HPC_15to25_v2.csv`, USPTO `patents.dta` | `SAVE_DIR/release/` (set in the notebook) | yes (model downloads) |
 
 All paths in the table are relative to the **data directory**, set with `--data-dir` (default: `data/`).
 
@@ -77,7 +79,8 @@ All paths in the table are relative to the **data directory**, set with `--data-
 
 ```
 .
-├── src/                         Python scripts, one per step, plus utils.py
+├── src/                         Python scripts of steps 1-5, plus utils.py
+├── colab/                       step 6 notebooks, run on Google Colab (GPU)
 ├── scripts/
 │   ├── run_sample.sh            steps 1-5 on a small date window   -> data/sample/
 │   ├── run_full.sh              steps 1-5 for 2015-01-01..2025-12-31 -> data/
@@ -307,6 +310,28 @@ section is missing on that page; they are expected. Only `⛔ Failed to parse, s
 - The output file name is fixed, also for the sample run.
 
 Options: `--data-dir`.
+
+### Step 6: build the released dataset on Colab (notebooks in `colab/`)
+
+Step 6 turns `processed/HPC_15to25_v2.csv` into the released dataset: removal of the records in which HPC has
+another meaning, the corpus rules, three summary layers written by language models, SPECTER2 embeddings, clusters
+and topics, the ownership evidence, the technical validation and the release files. It needs a GPU and is written
+as a Colab notebook in three versions whose code differs only in the `PROFILE` setting of the sample:
+
+| Notebook | Use | Open |
+|---|---|---|
+| `colab/step6_patentsum_pipeline.ipynb` | the full run (English) | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/step6_patentsum_pipeline.ipynb) |
+| `colab/step6_patentsum_pipeline_tw.ipynb` | the same notebook with Traditional Chinese explanations | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/step6_patentsum_pipeline_tw.ipynb) |
+| `colab/step6_patentsum_pipeline_sample.ipynb` | a test run of every cell on 400 records drawn at random | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/step6_patentsum_pipeline_sample.ipynb) |
+
+GitHub only displays notebooks; the Colab links open them from this repository in Google Colab, where they run.
+The notebooks read their input from Google Drive (`MyDrive/patent_HPC/`, set in cell 1.3).
+
+Besides `HPC_15to25_v2.csv`, step 6 reads `patents.dta` of the USPTO Patent Litigation Docket Reports
+(district-court cases, used for the litigation marks). All settings are in cell 1.3 of the notebook. Generating
+the facets and the three summary layers took about 20 hours on one A100 80 GB in the released run; the notebook can instead reuse the generated
+layers of an earlier run (`REUSE_DIR`) and then runs in an estimated 1 to 1.5 hours. Outputs go to `SAVE_DIR`
+(locally `data/step6/<profile>/`, which is not committed).
 
 ## Output columns (`HPC_15to25_v2.csv`)
 

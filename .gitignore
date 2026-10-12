@@ -59,6 +59,9 @@ yarn.lock
 # data/interim/parsed_data.json
 # data/processed/*.csv
 
+# Step 6 outputs of a local run (SAVE_DIR)
+data/step6/
+
 # ---- Local files ----
 connectdb.py
 docker-compose.yml

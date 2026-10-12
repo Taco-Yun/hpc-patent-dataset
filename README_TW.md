@@ -1,7 +1,7 @@
 # Google Patents HPC 資料集流程
 
 用 Python 腳本分五個步驟，從 [Google Patents](https://patents.google.com/) 建立專利資料集：
-逐日查詢 Google Patents、整理專利號清單、下載每篇專利頁面、解析頁面，最後攤平成一個 CSV 檔。
+逐日查詢 Google Patents、整理專利號清單、下載每篇專利頁面、解析頁面，最後攤平成一個 CSV 檔。第六步是 `colab/` 裡的 Colab notebook，把這個 CSV 檔轉成釋出資料集（見 [Step 6](#step-6在-colab-產生釋出資料集colab-裡的-notebook)）。
 
 預設設定會重現 **HPC 資料集**：符合查詢式 `(HPC)`、美國、已獲證、英文，且**申請日（filing date）**介於 2015-01-01 到 2025-12-31 的專利。所有設定都可以用命令列參數修改。
 
@@ -68,6 +68,7 @@ flowchart LR
 | 3 | `src/step3_download_patent_pages.py` | `interim/patent_id_from_{start}_{end}.csv` | `raw/html/{patent_id}.html` | 是（HTTP） |
 | 4 | `src/step4_parse_patent_pages.py` | `raw/html/*.html` | `interim/parsed_data.json` | 否（加 `--download-pdf` 時才需要） |
 | 5 | `src/step5_build_hpc_dataset.py` | `interim/parsed_data.json` | `processed/HPC_15to25_v2.csv` | 否 |
+| 6 | `colab/step6_patentsum_pipeline.ipynb`（Colab notebook，需 GPU） | `processed/HPC_15to25_v2.csv`、USPTO `patents.dta` | `SAVE_DIR/release/`（在 notebook 裡設定） | 是（下載模型） |
 
 表中路徑都相對於**資料目錄**，用 `--data-dir` 指定（預設 `data/`）。
 
@@ -75,7 +76,8 @@ flowchart LR
 
 ```
 .
-├── src/                         每個步驟一支 Python 腳本，加上 utils.py
+├── src/                         step 1-5 各一支 Python 腳本，加上 utils.py
+├── colab/                       step 6 的 notebook，在 Google Colab（GPU）上執行
 ├── scripts/
 │   ├── run_sample.sh            小時間區間跑 step 1-5   -> data/sample/
 │   ├── run_full.sh              2015-01-01..2025-12-31 跑 step 1-5 -> data/
@@ -300,6 +302,26 @@ uv run python src/step5_build_hpc_dataset.py
 - 輸出檔名固定，sample 試跑也一樣。
 
 選項：`--data-dir`。
+
+### Step 6：在 Colab 產生釋出資料集（`colab/` 裡的 notebook）
+
+Step 6 把 `processed/HPC_15to25_v2.csv` 轉成釋出資料集：移除 HPC 指其他意思的紀錄、套用語料規則、由語言模型寫出
+三個摘要層、SPECTER2 向量、分群與主題、權屬證據、技術驗證，最後寫出釋出檔。這一步需要 GPU，寫成 Colab notebook，
+共三個版本，程式碼只差在抽樣版的 `PROFILE` 設定：
+
+| Notebook | 用途 | 開啟 |
+|---|---|---|
+| `colab/step6_patentsum_pipeline.ipynb` | 完整執行（英文） | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/step6_patentsum_pipeline.ipynb) |
+| `colab/step6_patentsum_pipeline_tw.ipynb` | 同一份 notebook，說明文字為繁體中文 | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/step6_patentsum_pipeline_tw.ipynb) |
+| `colab/step6_patentsum_pipeline_sample.ipynb` | 隨機抽 400 筆，把每一格都跑一遍的測試版 | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/step6_patentsum_pipeline_sample.ipynb) |
+
+GitHub 只會顯示 notebook，不會執行；點 Colab 連結會直接從這個 repository 在 Google Colab 開啟，在那裡執行。
+notebook 的輸入檔從 Google Drive 讀取（`MyDrive/patent_HPC/`，在 1.3 設定）。
+
+除了 `HPC_15to25_v2.csv`，step 6 還要讀 USPTO Patent Litigation Docket Reports 的 `patents.dta`（地方法院案件，
+用於訴訟標註）。所有設定都在 notebook 的 1.3 這一格。facet 與三個摘要層的生成在釋出版本中用一張 A100 80 GB 約花 20 小時；
+也可以沿用先前某次執行的生成結果（`REUSE_DIR`），此時估計約需 1 到 1.5 小時。輸出寫到 `SAVE_DIR`
+（本機為 `data/step6/<profile>/`，不會被 commit）。
 
 ## 輸出欄位（`HPC_15to25_v2.csv`）
 
