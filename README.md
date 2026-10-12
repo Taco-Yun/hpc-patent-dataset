@@ -71,7 +71,7 @@ flowchart LR
 | 3 | `src/step3_download_patent_pages.py` | `interim/patent_id_from_{start}_{end}.csv` | `raw/html/{patent_id}.html` | yes (HTTP) |
 | 4 | `src/step4_parse_patent_pages.py` | `raw/html/*.html` | `interim/parsed_data.json` | no (unless `--download-pdf`) |
 | 5 | `src/step5_build_hpc_dataset.py` | `interim/parsed_data.json` | `processed/HPC_15to25_v2.csv` | no |
-| 6 | `colab/step6_patentsum_pipeline.ipynb` (Colab notebook, GPU) | `processed/HPC_15to25_v2.csv`, USPTO `patents.dta` | `SAVE_DIR/release/` (set in the notebook) | yes (model downloads) |
+| 6 | `colab/step6_patentsum_pipeline.ipynb` (Colab notebook, GPU) | `processed/HPC_15to25_v2.csv`, USPTO `patents.dta` | `<output folder>/release/` (set in the notebook) | yes (model downloads) |
 
 All paths in the table are relative to the **data directory**, set with `--data-dir` (default: `data/`).
 
@@ -80,13 +80,13 @@ All paths in the table are relative to the **data directory**, set with `--data-
 ```
 .
 ├── src/                         Python scripts of steps 1-5, plus utils.py
-├── colab/                       step 6 notebooks, run on Google Colab (GPU)
+├── colab/                       step 6 notebooks (Google Colab) and their code, hpc_patenttrace/
 ├── docs/                        results page of the released dataset (GitHub Pages)
 ├── scripts/
 │   ├── run_sample.sh            steps 1-5 on a small date window   -> data/sample/
 │   ├── run_full.sh              steps 1-5 for 2015-01-01..2025-12-31 -> data/
 │   ├── run_pipeline.sh          shared runner used by the two scripts above
-│   └── build_results_page.py    builds docs/ from release/ of a release bundle
+│   └── build_results_page.py    builds docs/ from release/ of a step 6 run
 ├── data/                        data directory of the full run (a few example files are included)
 │   ├── raw/id_list_json/        step 1 output
 │   ├── raw/html/                step 3 output
@@ -315,33 +315,34 @@ Options: `--data-dir`.
 
 ### Step 6: build the released dataset on Colab (notebooks in `colab/`)
 
-Step 6 turns `processed/HPC_15to25_v2.csv` into the released dataset: removal of the records in which HPC has
-another meaning, the corpus rules, three summary layers written by language models, SPECTER2 embeddings, clusters
-and topics, the ownership evidence, the technical validation and the release files. It needs a GPU and is written
-as a Colab notebook in three versions whose code differs only in the `PROFILE` setting of the sample:
+Step 6 turns `processed/HPC_15to25_v2.csv` into the HPC-PatentTrace data release: removal of the records in which HPC
+has another meaning, the corpus rules, three summary layers written by language models, SPECTER2 embeddings, clusters
+and topics, the ownership evidence, the technical validation and the release files. The notebooks run on Google Colab.
+Their code is in the package `colab/hpc_patenttrace/` (one file per step in `steps/`), so a notebook shows only its
+parameters, figures and tables.
 
 | Notebook | Use | Open |
 |---|---|---|
-| `colab/step6_patentsum_pipeline.ipynb` | the full run (English) | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/step6_patentsum_pipeline.ipynb) |
+| `colab/step6_patentsum_pipeline.ipynb` | the pipeline, from the crawler output to the release files (English) | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/step6_patentsum_pipeline.ipynb) |
 | `colab/step6_patentsum_pipeline_tw.ipynb` | the same notebook with Traditional Chinese explanations | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/step6_patentsum_pipeline_tw.ipynb) |
-| `colab/step6_patentsum_pipeline_sample.ipynb` | a test run of every cell on 400 records drawn at random | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/step6_patentsum_pipeline_sample.ipynb) |
+| `colab/reproduce_figures_tables.ipynb` | the figures and tables of the data descriptor, from the output folder of a full pipeline run (no GPU) | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/reproduce_figures_tables.ipynb) |
+| `colab/reproduce_figures_tables_tw.ipynb` | the same notebook with Traditional Chinese explanations | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/reproduce_figures_tables_tw.ipynb) |
 
-GitHub only displays notebooks; the Colab links open them from this repository in Google Colab, where they run.
-The notebooks read their input from Google Drive (`MyDrive/patent_HPC/`, set in cell 1.3).
-
-Besides `HPC_15to25_v2.csv`, step 6 reads `patents.dta` of the USPTO Patent Litigation Docket Reports
-(district-court cases, used for the litigation marks). All settings are in cell 1.3 of the notebook. Generating
-the facets and the three summary layers took about 20 hours on one A100 80 GB in the released run; the notebook can instead reuse the generated
-layers of an earlier run (`REUSE_DIR`) and then runs in an estimated 1 to 1.5 hours. Outputs go to `SAVE_DIR`
-(locally `data/step6/<profile>/`, which is not committed).
+GitHub only displays notebooks; the Colab links open them from this repository in Google Colab, where they run. Each
+notebook starts with a Parameters cell that holds the folder on Google Drive and the input files. The pipeline reads
+`HPC_15to25_v2.csv` and `patents.dta` of the USPTO Patent Litigation Docket Reports (district-court cases) and writes
+its outputs to `OUTPUT_DIR/full` (`release/` holds the release files). Generating the facets and the three summary
+layers took about 20 hours on one A100 80 GB in the released run. With `REUSE_FROM` set to the output folder of an
+earlier full run, the pipeline reuses its generated layers and runs in an estimated 1 to 1.5 hours.
+`PROFILE = "sample"` runs every step on 400 records drawn at random.
 
 **Results page.** `docs/index.html` (English) and `docs/index_tw.html` (Traditional Chinese) show the results of the
 released dataset: corpus construction, composition, summary layers, topics, ownership, technical validation, cost
-and files. Every number on the pages is read from `release/` of a release bundle (the zip file or an extracted
-folder) by `scripts/build_results_page.py`:
+and files. Every number on the pages is read from `release/` in the output folder of a full pipeline run by
+`scripts/build_results_page.py`:
 
 ```bash
-uv run python scripts/build_results_page.py --release PatentSum_release_bundle_20261011T1046Z.zip
+uv run python scripts/build_results_page.py --run path/to/output/full
 ```
 
 The charts load plotly.js from a CDN, so the pages need an internet connection.

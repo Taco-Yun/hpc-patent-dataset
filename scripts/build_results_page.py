@@ -1,58 +1,45 @@
 #!/usr/bin/env python3
 """Build the results pages of the HPC-PatentTrace release (for GitHub Pages).
 
-Every number on the pages is read from the release/ folder of a release bundle, either the zip file itself or
-an extracted folder. The script writes
+Every number on the pages is read from release/ in the output folder of a full run of the step 6 pipeline
+notebook (colab/step6_patentsum_pipeline.ipynb, folder OUTPUT_DIR/full). The script writes
   docs/index.html         English page
   docs/index_tw.html      Traditional Chinese page
   docs/assets/data.js     the values that the charts and the record viewer use (shared by both pages)
 docs/assets/results.js and docs/assets/results.css are static files of the pages.
 
 Usage:
-  uv run python scripts/build_results_page.py --release PatentSum_release_bundle_20261011T1046Z.zip
-  uv run python scripts/build_results_page.py --release path/to/extracted/bundle --out docs
+  uv run python scripts/build_results_page.py --run path/to/output/full
+  uv run python scripts/build_results_page.py --run path/to/output/full --out docs
 """
 import argparse
 import html
 import json
 import os
-import zipfile
 
 import pandas as pd
-
-# Publication numbers returned by the Google Patents query (DATA_README.md of the release:
-# provenance/patent_id_from_20150101_20251231.csv). release/ starts after the homonym screening.
-N_QUERY = 21947
 
 LAYERS = ["synthesized", "direct-brief", "direct-full"]
 REPS = ["abstract", "fulltext-truncated", "direct-brief", "direct-full", "synthesized"]
 SECTION_ORDER = ["G", "H", "A", "C", "B", "F", "E", "D"]
 CHANGE_TYPES = ["true_assignment", "change_of_name", "merger", "no_assignment_record", "security_interest",
                 "release_of_lien", "corrective", "partial_transfer", "other"]
-EXAMPLE_STRATA = [("primary:G", 3), ("primary:H", 2), ("primary:other", 1)]
-# Section numbers of the four generation steps in runtime_log_release.csv of the 2026-10-11 bundle
-GENERATION_STEPS = [("3.3", "facets"), ("4.6", "synthesized"), ("7.1b", "direct-brief"), ("7.1b′", "direct-full")]
+# Example records: drawn at random (seed 42) from the released records of each class section
+EXAMPLE_SECTIONS = [("G", 3), ("H", 2), ("other", 1)]
+# Section numbers of the four generation steps in runtime_log_release.csv (sections 4 and 5 of the pipeline)
+GENERATION_STEPS = [("4.3", "facets"), ("5.6", "synthesized"), ("5.10", "direct-brief"), ("5.11", "direct-full")]
 
 
 class Release:
-    """Reads files of release/ from a bundle zip or from a folder."""
+    """Reads the files of release/ in the output folder of the pipeline notebook."""
 
     def __init__(self, path):
-        self.name = os.path.basename(os.path.normpath(path))
-        if path.endswith(".zip"):
-            self.zip = zipfile.ZipFile(path)
-            names = self.zip.namelist()
-            self.prefix = next(m[: m.index("release/") + 8] for m in names if "release/" in m)
-            self.name = self.name[:-4]
-        else:
-            self.zip = None
-            sub = os.path.join(path, "release")
-            self.prefix = sub if os.path.isdir(sub) else path
+        sub = os.path.join(path, "release")
+        self.prefix = sub if os.path.isdir(sub) else path
+        if not os.path.isfile(os.path.join(self.prefix, "MANIFEST_release.csv")):
+            raise FileNotFoundError(f"{path} holds no release/MANIFEST_release.csv (section 9 of the pipeline writes it)")
 
     def csv(self, rel, **kw):
-        if self.zip:
-            with self.zip.open(self.prefix + rel) as f:
-                return pd.read_csv(f, **kw)
         return pd.read_csv(os.path.join(self.prefix, rel), **kw)
 
 
@@ -61,13 +48,13 @@ def collect(rel):
     D, F = {}, {}
 
     # ── corpus construction ──
-    funnel = rel.csv("tables/t1_funnel.csv")                       # stage, records, rule, removed (by position)
-    n_cand, n_complete, n_corpus = (int(v) for v in funnel.iloc[:, 1])
+    funnel = rel.csv("tables/funnel_from_crawler_output.csv")      # crawler output, candidates, complete, released
+    n_query, n_cand, n_complete, n_corpus = (int(v) for v in funnel["records"])
     ids = rel.csv("released_corpus_ids.csv")
-    assert len(ids) == n_corpus, "t1_funnel.csv and released_corpus_ids.csv disagree"
-    F.update(n_query=N_QUERY, n_cand=n_cand, n_homonym=N_QUERY - n_cand, n_complete=n_complete,
+    assert len(ids) == n_corpus, "funnel_from_crawler_output.csv and released_corpus_ids.csv disagree"
+    F.update(n_query=n_query, n_cand=n_cand, n_homonym=n_query - n_cand, n_complete=n_complete,
              n_incomplete=n_cand - n_complete, n_corpus=n_corpus, n_excluded=n_complete - n_corpus)
-    D["funnel"] = [N_QUERY, n_cand, n_complete, n_corpus]
+    D["funnel"] = [n_query, n_cand, n_complete, n_corpus]
 
     comp = rel.csv("tables/completeness_bias_by_ipc_section.csv")  # section, before, after, removed, rate, ...
     comp = comp.set_index(comp.columns[0])
@@ -129,15 +116,17 @@ def collect(rel):
     D["added"] = {l: {"mean": float(av[f"{l}_added"].mean()), "any": float((av[f"{l}_added"] > 0).mean() * 100)}
                   for l in LAYERS}
 
-    # Example records: the first records of each class-section stratum of the human-audit sample
-    audit = rel.csv("audit_primary_50.csv")
+    # Example records (EXAMPLE_SECTIONS)
+    rec = rel.csv("hpc_patenttrace_corpus.csv", usecols=["patent_id", "title", "abstract", "patent_url", "main_ipc_4"])
+    rec["section"] = rec["main_ipc_4"].fillna("").str[:1].where(lambda s: s.isin(["G", "H"]), "other")
+    syn = rel.csv("summaries_synthesized.csv").set_index("patent_id")["final_summary"]
     brief = rel.csv("summaries_direct_brief.csv").set_index("patent_id")["direct_brief_summary"]
     full = rel.csv("summaries_direct_full.csv").set_index("patent_id")["direct_full_summary"]
     D["examples"] = []
-    for stratum, k in EXAMPLE_STRATA:
-        for _, r in audit[audit["stratum"] == stratum].head(k).iterrows():
+    for section, k in EXAMPLE_SECTIONS:
+        for _, r in rec[rec["section"] == section].sample(k, random_state=42).iterrows():
             D["examples"].append({"id": r["patent_id"], "title": r["title"], "url": r["patent_url"],
-                                  "abstract": r["abstract"], "synthesized": r["final_summary"],
+                                  "abstract": r["abstract"], "synthesized": syn[r["patent_id"]],
                                   "direct-brief": brief[r["patent_id"]], "direct-full": full[r["patent_id"]]})
 
     # ── topics ──
@@ -226,15 +215,16 @@ def collect(rel):
         r = rt[_sec == code].iloc[0]
         D["cost"].append({"step": name, "seconds": float(r["seconds"]), "n": int(r["n_items"]), "hw": r["hardware"]})
     F["gen_seconds"] = sum(c["seconds"] for c in D["cost"])
-    F["all_seconds"] = float(rt["seconds"].sum())
-    F["other_seconds"] = F["all_seconds"] - F["gen_seconds"]
+    # the other steps are summed only when the whole log comes from the hardware of the generation steps
+    # (a run that reuses generated layers logs the generation steps of the earlier run)
+    _hw = {c["hw"] for c in D["cost"]}
+    F["other_seconds"] = float(rt["seconds"].sum()) - F["gen_seconds"] if set(rt["hardware"].dropna()) == _hw else None
 
     # ── files ──
     man = rel.csv("MANIFEST_release.csv")
     D["files"] = [{"file": r["file"], "rows": None if pd.isna(r["rows"]) else int(r["rows"]),
                    "cols": None if pd.isna(r["columns"]) else int(r["columns"]), "mb": float(r["MB"])}
                   for _, r in man.iterrows()]
-    F["bundle"] = rel.name
     return D, F
 
 
@@ -279,17 +269,17 @@ STEP_NAME = {"en": {"facets": "facets (Llama-3.1-8B-Instruct, 4-bit)", "synthesi
 
 
 def texts(lang, F):
-    """Section text. Numbers come from F; the only number typed in by hand is N_QUERY (see its comment)."""
+    """Section text. Numbers come from F."""
     if lang == "en":
         return {
-            "html_lang": "en", "title": "HPC-PatentTrace: results of the released dataset",
+            "html_lang": "en", "title": "High-performance computing patent dataset with full text, structured summaries and semantic embeddings",
+            "kicker": "HPC-PatentTrace v1.0 · results of the released dataset",
             "switch": ("index_tw.html", "中文"),
             "lead": (f"HPC-PatentTrace covers {n(F['n_corpus'])} United States granted patents, filed from 2015 to 2025, "
                      "that mention high-performance computing. This page shows how the corpus was built and what the "
                      "release contains."),
-            "source": (f"Every number below is read from the release/ folder of the release bundle {F['bundle']} "
-                       "by scripts/build_results_page.py of this repository. The code that produced the release is "
-                       "in colab/ (step 6)."),
+            "source": ("Every number below is read from release/ in the output folder of the step 6 pipeline notebook "
+                       "(colab/step6_patentsum_pipeline.ipynb) by scripts/build_results_page.py of this repository."),
             "nav": ["Overview", "Corpus", "Composition", "Summaries", "Topics", "Ownership", "Validation", "Cost", "Files"],
             "tiles": [(n(F["n_corpus"]), "granted US patents in the corpus"), ("2015–2025", "filing years"),
                       ("3", "summary layers per record"), ("5", "text representations with SPECTER2 embeddings"),
@@ -302,8 +292,7 @@ def texts(lang, F):
                          "candidates whose title, abstract, background, detailed description and claims were all "
                          f"extracted. The inclusion rule then keeps the {n(F['n_corpus'])} records whose text contains the "
                          "expanded phrase high performance comput*."),
-            "corpus_note": (f"{n(F['n_query'])} is the number of publication numbers of the query (DATA_README.md of the "
-                            f"release); release/ itself starts from the {n(F['n_cand'])} candidates."),
+            "corpus_note": f"{n(F['n_query'])} is the number of records in the crawler output (step 5), one per publication number.",
             "removal_h": "Where the rules remove records",
             "removal_p": (f"Both rules keep most records of sections G (physics, including computing) and H (electricity) "
                           f"and remove most records of the other sections. The completeness filter removes "
@@ -333,8 +322,8 @@ def texts(lang, F):
             "sum_metric_cols": ["layer", "mean words", "compression", "ROUGE-1 F1 (own)", "ROUGE-1 F1 (shifted)",
                                 "ROUGE-L F1 (own)"],
             "example_h": "Example records",
-            "example_p": ("The records below are the first records of each class-section stratum of the human-audit "
-                          "sample (audit_primary_50.csv)."),
+            "example_p": ("Six released records drawn at random (seed 42): three of section G, two of section H and one "
+                          "of the other sections."),
             "example_labels": {"abstract": "Abstract (from the patent)", "synthesized": "synthesized",
                                "direct-brief": "direct-brief", "direct-full": "direct-full", "open": "Google Patents"},
             "added_p": (f"The summaries carry content that the abstract does not have. A candidate is a long technical "
@@ -404,15 +393,16 @@ def texts(lang, F):
             "intra_p": "Mean cosine similarity of the records of the same topic, for each representation:",
             "intra_cols": ["representation", "mean similarity within topics"],
             "cost_h": "Computing cost",
-            "cost_p": (f"Generating the facets and the three summary layers took {hours(F['gen_seconds'])} hours on one "
-                       f"A100 80 GB GPU; all other logged steps of the run took {hours(F['other_seconds'])} hours "
-                       "(runtime_log_release.csv)."),
+            "cost_p": (f"Generating the facets and the three summary layers took {hours(F['gen_seconds'])} hours"
+                       + (f"; all other logged steps of the run took {hours(F['other_seconds'])} hours on the same hardware"
+                          if F["other_seconds"] is not None else "")
+                       + ". The table gives the hardware of each step (runtime_log_release.csv)."),
             "cost_cols": ["generation step", "records", "hours", "seconds per record", "hardware"],
             "files_h": "Files of the release",
             "files_p": "MANIFEST_release.csv lists the files of release/ with their size:",
             "files_cols": ["file", "rows", "columns", "MB"],
             "sources": "Files:",
-            "footer": ("HPC-PatentTrace v1.0. Page generated from release/ by scripts/build_results_page.py. "
+            "footer": ("HPC-PatentTrace v1.0. Page generated from release/ of the pipeline output by scripts/build_results_page.py. "
                        "The crawler and the step 6 notebooks are in this repository."),
             "chart": {
                 "funnel": ["query results", "after homonym screening", "five complete sections", "released corpus"],
@@ -429,12 +419,13 @@ def texts(lang, F):
             },
         }
     return {
-        "html_lang": "zh-Hant", "title": "HPC-PatentTrace：釋出資料集的成果",
+        "html_lang": "zh-Hant", "title": "具全文、結構化摘要與語意向量的高效能運算專利資料集",
+        "kicker": "HPC-PatentTrace v1.0 · 釋出資料集的成果",
         "switch": ("index.html", "English"),
         "lead": (f"HPC-PatentTrace 收錄 {n(F['n_corpus'])} 件提及高效能運算（high-performance computing）的美國核准專利，"
                  "申請年為 2015 到 2025 年。這一頁說明語料怎麼建立，以及釋出檔裡有什麼。"),
-        "source": (f"以下所有數字都由本 repository 的 scripts/build_results_page.py 直接讀取釋出資料包 {F['bundle']} 的 "
-                   "release/ 資料夾產生。產生釋出檔的程式在 colab/（第六步）。"),
+        "source": ("以下所有數字都由本 repository 的 scripts/build_results_page.py 讀取第六步 pipeline notebook"
+                   "（colab/step6_patentsum_pipeline_tw.ipynb）輸出資料夾裡的 release/ 產生。"),
         "nav": ["總覽", "語料建立", "語料組成", "摘要層", "主題", "權屬", "技術驗證", "計算成本", "釋出檔"],
         "tiles": [(n(F["n_corpus"]), "件美國核准專利"), ("2015–2025", "申請年"),
                   ("3", "個摘要層（每筆紀錄）"), ("5", "種文字表徵的 SPECTER2 向量"),
@@ -445,8 +436,7 @@ def texts(lang, F):
                      "例如 hydroxypropyl cellulose（羥丙基纖維素）或 high-pressure compressor（高壓壓縮機）。完整性過濾"
                      f"保留標題、摘要、先前技術、詳細說明與請求項都有擷取到的 {n(F['n_complete'])} 筆候選紀錄。最後由收錄"
                      f"規則保留內文出現展開語 high performance comput* 的 {n(F['n_corpus'])} 筆。"),
-        "corpus_note": (f"{n(F['n_query'])} 是查詢得到的公開號數（釋出版本的 DATA_README.md）；release/ 本身從撞字篩選後的 "
-                        f"{n(F['n_cand'])} 筆候選開始。"),
+        "corpus_note": f"{n(F['n_query'])} 是爬蟲輸出（第五步）的筆數，每個公開號一筆。",
         "removal_h": "各規則在哪些部移除紀錄",
         "removal_p": (f"兩條規則都保留 G 部（物理，含運算）與 H 部（電學）的大部分紀錄，其他部則大多被移除。完整性過濾移除 G 部"
                       f"候選的 {p1(F['comp_G'])}%、H 部的 {p1(F['comp_H'])}%，A 部則是 {p1(F['comp_A'])}%、C 部 "
@@ -466,7 +456,7 @@ def texts(lang, F):
                   "direct-brief 以單一提示讀各段落的短節錄；direct-full 以單一提示讀與分面相同的段落預算。"),
         "sum_metric_cols": ["摘要層", "平均字數", "壓縮比", "ROUGE-1 F1（自己）", "ROUGE-1 F1（錯位）", "ROUGE-L F1（自己）"],
         "example_h": "紀錄範例",
-        "example_p": "下列紀錄取自人工稽核樣本（audit_primary_50.csv）各分類部分層的前幾筆。",
+        "example_p": "隨機抽出（seed 42）的六筆釋出紀錄：G 部三筆、H 部兩筆、其他部一筆。",
         "example_labels": {"abstract": "摘要（專利原文）", "synthesized": "synthesized", "direct-brief": "direct-brief",
                            "direct-full": "direct-full", "open": "Google Patents"},
         "added_p": (f"摘要層帶有原文摘要沒有的內容。候選詞指出現在說明書、但不在標題與摘要中的長技術詞（12 個字母以上）；"
@@ -518,14 +508,16 @@ def texts(lang, F):
         "intra_p": "各表徵在同一主題內紀錄的平均餘弦相似度：",
         "intra_cols": ["表徵", "主題內平均相似度"],
         "cost_h": "計算成本",
-        "cost_p": (f"分面與三個摘要層的生成在一張 A100 80 GB GPU 上共花 {hours(F['gen_seconds'])} 小時；該次執行其餘有計時的"
-                   f"步驟共 {hours(F['other_seconds'])} 小時（runtime_log_release.csv）。"),
+        "cost_p": (f"分面與三個摘要層的生成共花 {hours(F['gen_seconds'])} 小時"
+                   + (f"；該次執行其餘有計時的步驟在同一硬體上共 {hours(F['other_seconds'])} 小時"
+                      if F["other_seconds"] is not None else "")
+                   + "。各步驟的硬體見下表（runtime_log_release.csv）。"),
         "cost_cols": ["生成步驟", "筆數", "小時", "每筆秒數", "硬體"],
         "files_h": "釋出檔",
         "files_p": "MANIFEST_release.csv 列出 release/ 的檔案與大小：",
         "files_cols": ["檔案", "列數", "欄數", "MB"],
         "sources": "資料檔：",
-        "footer": ("HPC-PatentTrace v1.0。本頁由 scripts/build_results_page.py 從 release/ 產生；爬蟲與第六步的 notebook "
+        "footer": ("HPC-PatentTrace v1.0。本頁由 scripts/build_results_page.py 從 pipeline 輸出的 release/ 產生；爬蟲與第六步的 notebook "
                    "都在這個 repository。"),
         "chart": {
             "funnel": ["查詢結果", "撞字篩選後", "五欄完整", "釋出語料"],
@@ -610,7 +602,7 @@ def render(lang, D, F):
 </head>
 <body>
 <header class="wrap">
-  <div class="topline"><span class="kicker">HPC-PatentTrace v1.0</span><a class="switch" href="{other_href}">{esc(other_label)}</a></div>
+  <div class="topline"><span class="kicker">{esc(T['kicker'])}</span><a class="switch" href="{other_href}">{esc(other_label)}</a></div>
   <h1>{esc(T['title'])}</h1>
   <p class="lead">{esc(T['lead'])}</p>
   <p class="source">{esc(T['source'])}</p>
@@ -629,7 +621,7 @@ def render(lang, D, F):
   <div class="chart" id="chart-removal"></div>
   <p>{esc(T['missing_p'])}</p>
   {missing}
-  {files_line(T, ["tables/t1_funnel.csv", "tables/completeness_bias_by_ipc_section.csv", "differential_exclusion.csv", "tables/completeness_missing_by_field.csv"])}
+  {files_line(T, ["tables/funnel_from_crawler_output.csv", "tables/completeness_bias_by_ipc_section.csv", "differential_exclusion.csv", "tables/completeness_missing_by_field.csv"])}
 </section>
 
 <section id="composition">
@@ -657,7 +649,7 @@ def render(lang, D, F):
   {added}
   <p>{esc(T['ppl_p'])}</p>
   <div class="chart" id="chart-ppl"></div>
-  {files_line(T, ["summary_metrics.csv", "summaries_synthesized.csv", "summaries_direct_brief.csv", "summaries_direct_full.csv", "audit_primary_50.csv", "added_value_beyond_abstract.csv", "ppl_summaries.csv"])}
+  {files_line(T, ["summary_metrics.csv", "summaries_synthesized.csv", "summaries_direct_brief.csv", "summaries_direct_full.csv", "hpc_patenttrace_corpus.csv", "added_value_beyond_abstract.csv", "ppl_summaries.csv"])}
 </section>
 
 <section id="topics">
@@ -728,17 +720,17 @@ def render(lang, D, F):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("--release", required=True, help="release bundle (.zip) or a folder that holds release/")
+    ap.add_argument("--run", required=True, help="output folder of a full run of the pipeline notebook (holds release/)")
     ap.add_argument("--out", default=os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs"))
     a = ap.parse_args()
-    D, F = collect(Release(a.release))
+    D, F = collect(Release(a.run))
     os.makedirs(os.path.join(a.out, "assets"), exist_ok=True)
     with open(os.path.join(a.out, "assets", "data.js"), "w", encoding="utf-8") as f:
         f.write("window.RESULTS = " + json.dumps(D, ensure_ascii=False, separators=(",", ":")) + ";\n")
     for lang, name in (("en", "index.html"), ("tw", "index_tw.html")):
         with open(os.path.join(a.out, name), "w", encoding="utf-8") as f:
             f.write(render(lang, D, F))
-    print(f"read {F['bundle']}: {F['n_corpus']:,} records, {F['n_topics']} topics -> {a.out}")
+    print(f"read {a.run}: {F['n_corpus']:,} records, {F['n_topics']} topics -> {a.out}")
 
 
 if __name__ == "__main__":
