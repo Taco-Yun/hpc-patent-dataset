@@ -78,10 +78,12 @@ flowchart LR
 .
 ├── src/                         step 1-5 各一支 Python 腳本，加上 utils.py
 ├── colab/                       step 6 的 notebook，在 Google Colab（GPU）上執行
+├── docs/                        釋出資料集的成果頁（GitHub Pages）
 ├── scripts/
 │   ├── run_sample.sh            小時間區間跑 step 1-5   -> data/sample/
 │   ├── run_full.sh              2015-01-01..2025-12-31 跑 step 1-5 -> data/
-│   └── run_pipeline.sh          上面兩支共用的執行腳本
+│   ├── run_pipeline.sh          上面兩支共用的執行腳本
+│   └── build_results_page.py    由釋出資料包的 release/ 產生 docs/
 ├── data/                        完整執行的資料目錄（附少量範例檔）
 │   ├── raw/id_list_json/        step 1 輸出
 │   ├── raw/html/                step 3 輸出
@@ -322,6 +324,16 @@ notebook 的輸入檔從 Google Drive 讀取（`MyDrive/patent_HPC/`，在 1.3 �
 用於訴訟標註）。所有設定都在 notebook 的 1.3 這一格。facet 與三個摘要層的生成在釋出版本中用一張 A100 80 GB 約花 20 小時；
 也可以沿用先前某次執行的生成結果（`REUSE_DIR`），此時估計約需 1 到 1.5 小時。輸出寫到 `SAVE_DIR`
 （本機為 `data/step6/<profile>/`，不會被 commit）。
+
+**成果頁。** `docs/index.html`（英文）與 `docs/index_tw.html`（繁體中文）呈現釋出資料集的成果：語料建立、語料組成、
+摘要層、主題、權屬、技術驗證、計算成本與釋出檔。頁面上的數字都由 `scripts/build_results_page.py` 直接讀取釋出資料包
+（zip 檔或解壓後的資料夾）的 `release/` 產生：
+
+```bash
+uv run python scripts/build_results_page.py --release PatentSum_release_bundle_20261011T1046Z.zip
+```
+
+圖表從 CDN 載入 plotly.js，所以開啟頁面需要網路。
 
 ## 輸出欄位（`HPC_15to25_v2.csv`）
 

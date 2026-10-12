@@ -81,10 +81,12 @@ All paths in the table are relative to the **data directory**, set with `--data-
 .
 ├── src/                         Python scripts of steps 1-5, plus utils.py
 ├── colab/                       step 6 notebooks, run on Google Colab (GPU)
+├── docs/                        results page of the released dataset (GitHub Pages)
 ├── scripts/
 │   ├── run_sample.sh            steps 1-5 on a small date window   -> data/sample/
 │   ├── run_full.sh              steps 1-5 for 2015-01-01..2025-12-31 -> data/
-│   └── run_pipeline.sh          shared runner used by the two scripts above
+│   ├── run_pipeline.sh          shared runner used by the two scripts above
+│   └── build_results_page.py    builds docs/ from release/ of a release bundle
 ├── data/                        data directory of the full run (a few example files are included)
 │   ├── raw/id_list_json/        step 1 output
 │   ├── raw/html/                step 3 output
@@ -332,6 +334,17 @@ Besides `HPC_15to25_v2.csv`, step 6 reads `patents.dta` of the USPTO Patent Liti
 the facets and the three summary layers took about 20 hours on one A100 80 GB in the released run; the notebook can instead reuse the generated
 layers of an earlier run (`REUSE_DIR`) and then runs in an estimated 1 to 1.5 hours. Outputs go to `SAVE_DIR`
 (locally `data/step6/<profile>/`, which is not committed).
+
+**Results page.** `docs/index.html` (English) and `docs/index_tw.html` (Traditional Chinese) show the results of the
+released dataset: corpus construction, composition, summary layers, topics, ownership, technical validation, cost
+and files. Every number on the pages is read from `release/` of a release bundle (the zip file or an extracted
+folder) by `scripts/build_results_page.py`:
+
+```bash
+uv run python scripts/build_results_page.py --release PatentSum_release_bundle_20261011T1046Z.zip
+```
+
+The charts load plotly.js from a CDN, so the pages need an internet connection.
 
 ## Output columns (`HPC_15to25_v2.csv`)
 
