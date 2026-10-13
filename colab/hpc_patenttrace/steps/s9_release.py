@@ -413,7 +413,22 @@ pd.DataFrame(_manifest).to_csv(os.path.join(RELEASE_DIR, "MANIFEST_release.csv")
 print(f"\nrelease -> {RELEASE_DIR}  ({len(_manifest)} items, list in MANIFEST_release.csv)")
 
 
-# ── 9.4  Files written to SAVE_DIR ──────────────────────────────────────────
+# ── 9.4  Release names: every ipc in a file or column name becomes cpc ─────────
+# The class codes are CPC codes (Cooperative Patent Classification paths of Google Patents). 9.3 wrote release/
+# with the working names; this part renames ipc to cpc in the file names, the column names, the JSON keys of
+# cpc_description and three columns that list field or step names (hpc_patenttrace/names.py). Each converted file
+# is checked against the file it replaces: same rows, same identifiers, same class codes and the same values in
+# every other column. release/NAME_MAPPING_ipc_to_cpc.csv lists every old and new name. The working files of
+# SAVE_DIR keep their names. The same step can be run alone on the release/ folder of an earlier run:
+#   python -m hpc_patenttrace.names <release folder>
+from hpc_patenttrace.names import convert_release, MAPPING_FILE
+
+NAME_CHECK = convert_release(RELEASE_DIR)
+print(f"{len(NAME_CHECK)} files converted to the CPC names and checked against the originals; "
+      f"old and new names in release/{MAPPING_FILE}")
+
+
+# ── 9.5  Files written to SAVE_DIR ──────────────────────────────────────────
 _rows = []
 for _root, _dirs, _files in os.walk(SAVE_DIR):
     for _f in _files:

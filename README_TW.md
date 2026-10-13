@@ -381,7 +381,8 @@ df["citations"] = df["citations"].apply(ast.literal_eval)
 我們檢查過的所有頁面（77 頁、6,215 筆分類）每一筆都標記為 `IsCPC="true"`，
 所以實際上是 **CPC** 代碼；欄位名稱保留 `ipc` 是為了相容。
 在四碼層級，大多數 CPC 子類與 IPC 子類同碼。6,535 筆釋出紀錄中的例外是 Y 部、CPC 的索引碼 B60Y、C01P、C12Y、E05Y、
-F05B、F05D，以及 IPC 2026.01 版已不再收錄的 H01L。
+F05B、F05D，以及 IPC 2026.01 版已不再收錄的 H01L。第六步寫出的釋出檔，所有檔名與欄名中的 ipc 都改為 cpc（例如 `main_cpc`、
+`main_cpc_4`、`cpc_description`、`cpc_downstream_comparison.csv`），新舊名稱的對照在 `release/NAME_MAPPING_ipc_to_cpc.csv`。
 
 ## 瀏覽器自動化注意事項（版本相容）
 

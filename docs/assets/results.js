@@ -160,7 +160,7 @@
     return {
       type: "scatter3d", mode: "markers", name: name,
       x: idx.map((i) => M.x[i]), y: idx.map((i) => M.y[i]), z: idx.map((i) => M.z[i]),
-      customdata: idx.map((i) => [M.title[i], M.who[i], M.ipc[i], M.topic[i] === -1 ? T.noise : labelOf[M.topic[i]]]),
+      customdata: idx.map((i) => [M.title[i], M.who[i], M.cpc[i], M.topic[i] === -1 ? T.noise : labelOf[M.topic[i]]]),
       marker: { size: size, color: color, opacity: opacity, line: { width: 0 } },
       hovertemplate: HOVER,
     };

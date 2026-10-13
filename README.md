@@ -395,7 +395,9 @@ In every page we checked (77 pages, 6,215 classification entries) each entry is 
 so these are **CPC** codes; the column names keep the `ipc` prefix for compatibility.
 At the four-character level most CPC subclasses carry the same code as an IPC subclass. In the 6,535 released
 records the exceptions are the Y section, the CPC indexing schemes B60Y, C01P, C12Y, E05Y, F05B and F05D, and
-H01L, which the IPC version 2026.01 no longer contains.
+H01L, which the IPC version 2026.01 no longer contains. The release files written by step 6 use cpc in place of
+ipc in every file and column name (for example `main_cpc`, `main_cpc_4`, `cpc_description` and
+`cpc_downstream_comparison.csv`); `release/NAME_MAPPING_ipc_to_cpc.csv` lists each old and new name.
 
 ## Browser automation notes (version compatibility)
 

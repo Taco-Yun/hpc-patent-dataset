@@ -56,9 +56,9 @@ def collect(rel):
              n_incomplete=n_cand - n_complete, n_corpus=n_corpus, n_excluded=n_complete - n_corpus)
     D["funnel"] = [n_query, n_cand, n_complete, n_corpus]
 
-    comp = rel.csv("tables/completeness_bias_by_ipc_section.csv")  # section, before, after, removed, rate, ...
+    comp = rel.csv("tables/completeness_bias_by_cpc_section.csv")  # section, before, after, removed, rate, ...
     comp = comp.set_index(comp.columns[0])
-    excl = rel.csv("differential_exclusion.csv").set_index("ipc_section")
+    excl = rel.csv("differential_exclusion.csv").set_index("cpc_section")
     D["removal"] = {"sections": SECTION_ORDER,
                     "completeness": [float(comp.loc[s].iloc[3]) for s in SECTION_ORDER],
                     "inclusion": [float(excl.loc[s, "exclusion_rate_pct"]) for s in SECTION_ORDER],
@@ -76,7 +76,7 @@ def collect(rel):
              miss_cl=_m["claims_text"]["share"])
 
     # ── composition ──
-    sec = rel.csv("tables/t5a_ipc_section.csv")                    # section, records, share
+    sec = rel.csv("tables/t5a_cpc_section.csv")                    # section, records, share
     D["sections"] = [{"s": str(r.iloc[0]), "n": int(r.iloc[1]), "share": float(r.iloc[2])} for _, r in sec.iterrows()]
     F["share_GH"] = sum(d["share"] for d in D["sections"] if d["s"] in ("G", "H"))
     yrs = rel.csv("tables/t4_application_year.csv")                # year, records, share, note (right truncation)
@@ -117,8 +117,8 @@ def collect(rel):
                   for l in LAYERS}
 
     # Example records (EXAMPLE_SECTIONS)
-    rec = rel.csv("hpc_patenttrace_corpus.csv", usecols=["patent_id", "title", "abstract", "patent_url", "main_ipc_4"])
-    rec["section"] = rec["main_ipc_4"].fillna("").str[:1].where(lambda s: s.isin(["G", "H"]), "other")
+    rec = rel.csv("hpc_patenttrace_corpus.csv", usecols=["patent_id", "title", "abstract", "patent_url", "main_cpc_4"])
+    rec["section"] = rec["main_cpc_4"].fillna("").str[:1].where(lambda s: s.isin(["G", "H"]), "other")
     syn = rel.csv("summaries_synthesized.csv").set_index("patent_id")["final_summary"]
     brief = rel.csv("summaries_direct_brief.csv").set_index("patent_id")["direct_brief_summary"]
     full = rel.csv("summaries_direct_full.csv").set_index("patent_id")["direct_full_summary"]
@@ -136,21 +136,21 @@ def collect(rel):
     noise = ts[ts["topic_id"] == -1]
     ts = ts[ts["topic_id"] != -1].sort_values("patent_count", ascending=False)
     D["topics"] = [{"id": int(r["topic_id"]), "label": r["topic_label"], "n": int(r["patent_count"]),
-                    "ipc": r["top_ipc"], "company": r["top_company"]} for _, r in ts.iterrows()]
+                    "cpc": r["top_cpc"], "company": r["top_company"]} for _, r in ts.iterrows()]
     F.update(n_topics=len(ts), n_topic_records=int(ts["patent_count"].sum()), n_noise=int(noise["patent_count"].iloc[0]),
              n_clusters=int(clu.loc[clu["cluster_id"] != -1, "cluster_id"].nunique()))
     assert F["n_topic_records"] + F["n_noise"] == n_corpus
     F["topic_share"] = F["n_topic_records"] / n_corpus * 100
     F["noise_share"] = F["n_noise"] / n_corpus * 100
-    sec_code = clu["main_ipc_4"].fillna("?").astype(str).str[0].map({"G": 0, "H": 1}).fillna(2).astype(int)
+    sec_code = clu["main_cpc_4"].fillna("?").astype(str).str[0].map({"G": 0, "H": 1}).fillna(2).astype(int)
     D["map"] = {"x": clu["umap_3d_x"].round(2).tolist(), "y": clu["umap_3d_y"].round(2).tolist(),
                 "z": clu["umap_3d_z"].round(2).tolist(), "topic": clu["topic_id"].astype(int).tolist(),
                 "section": sec_code.tolist(),
                 "title": [t if len(t) <= 90 else t[:87] + "..." for t in clu["title"].fillna("").astype(str)],
                 "who": clu["assignee_display"].fillna("").astype(str).tolist(),
-                "ipc": clu["main_ipc_4"].fillna("").astype(str).tolist()}
+                "cpc": clu["main_cpc_4"].fillna("").astype(str).tolist()}
 
-    met = rel.csv("tables/e6_topic_ipc_metrics.csv")               # measure, value, note (by position)
+    met = rel.csv("tables/e6_topic_cpc_metrics.csv")               # measure, value, note (by position)
     _names = [str(v) for v in met.iloc[:, 0]]
     assert "NMI" in _names[0] and "ARI" in _names[1] and "homogeneity" in _names[2] and "completeness" in _names[3]
     F.update(nmi=float(met.iloc[0, 1]), ari=float(met.iloc[1, 1]), homog=float(met.iloc[2, 1]), compl=float(met.iloc[3, 1]))
@@ -188,11 +188,11 @@ def collect(rel):
              n_groups=int(lf["case_group"].nunique()), n_lit_topics=len(lt))
 
     # ── technical validation ──
-    cpc = rel.csv("ipc_downstream_comparison.csv").set_index("representation")
+    cpc = rel.csv("cpc_downstream_comparison.csv").set_index("representation")
     D["cpc"] = {r: float(cpc.loc[r, "ml_f1_micro"]) for r in REPS}
     F.update(cpc_labels=int(cpc["n_labels"].iloc[0]), cpc_test=int(cpc["n_test"].iloc[0]),
              cpc_min=min(D["cpc"].values()), cpc_max=max(D["cpc"].values()))
-    boot = rel.csv("ipc_downstream_bootstrap.csv")
+    boot = rel.csv("cpc_downstream_bootstrap.csv")
     D["boot"] = [{"pair": r["comparison"].replace(" - ", " − "), "est": float(r["point_estimate"]),
                   "lo": float(r["ci_low"]), "hi": float(r["ci_high"])} for _, r in boot.iterrows()]
     F["n_boot"] = int(boot["n_boot"].iloc[0])
@@ -570,7 +570,7 @@ def render(lang, D, F):
                          for l in LAYERS], num_cols=(1, 2, 3, 4, 5))
     added = table(T["added_cols"], [(l, f'{D["added"][l]["mean"]:.2f}', p1(D["added"][l]["any"])) for l in LAYERS],
                   num_cols=(1, 2))
-    topics = table(T["topic_cols"], [(t["label"], n(t["n"]), t["ipc"], t["company"]) for t in D["topics"]], num_cols=(1,))
+    topics = table(T["topic_cols"], [(t["label"], n(t["n"]), t["cpc"], t["company"]) for t in D["topics"]], num_cols=(1,))
     ba = table(T["ba_cols"], [(b["rank"], b["before"], n(b["n_before"]), b["after"], n(b["n_after"]))
                               for b in D["before_after"]], num_cols=(0, 2, 4))
     lit = table(T["lit_cols"], [(l["id"], l["group"], T["yes"] if l["seed"] else T["no"], l["text"])
@@ -621,7 +621,7 @@ def render(lang, D, F):
   <div class="chart" id="chart-removal"></div>
   <p>{esc(T['missing_p'])}</p>
   {missing}
-  {files_line(T, ["tables/funnel_from_crawler_output.csv", "tables/completeness_bias_by_ipc_section.csv", "differential_exclusion.csv", "tables/completeness_missing_by_field.csv"])}
+  {files_line(T, ["tables/funnel_from_crawler_output.csv", "tables/completeness_bias_by_cpc_section.csv", "differential_exclusion.csv", "tables/completeness_missing_by_field.csv"])}
 </section>
 
 <section id="composition">
@@ -632,7 +632,7 @@ def render(lang, D, F):
     <div class="chart" id="chart-years"></div>
   </div>
   {assignees}
-  {files_line(T, ["tables/t5a_ipc_section.csv", "tables/t4_application_year.csv", "tables/t6_top20_assignee.csv"])}
+  {files_line(T, ["tables/t5a_cpc_section.csv", "tables/t4_application_year.csv", "tables/t6_top20_assignee.csv"])}
 </section>
 
 <section id="summaries">
@@ -668,7 +668,7 @@ def render(lang, D, F):
   {topics}
   <p>{esc(T['trend_p'])}</p>
   <div class="chart mid" id="chart-trends"></div>
-  {files_line(T, ["cluster_results.csv", "topic_summary.csv", "tables/e6_topic_ipc_metrics.csv", "usage_topic_trends.csv"])}
+  {files_line(T, ["cluster_results.csv", "topic_summary.csv", "tables/e6_topic_cpc_metrics.csv", "usage_topic_trends.csv"])}
 </section>
 
 <section id="ownership">
@@ -696,7 +696,7 @@ def render(lang, D, F):
   <div class="chart short" id="chart-applicant"></div>
   <p>{esc(T['intra_p'])}</p>
   {intra}
-  {files_line(T, ["summary_metrics.csv", "pairing_integrity_flags.csv", "ipc_downstream_comparison.csv", "ipc_downstream_bootstrap.csv", "developer_demo_comparison.csv", "intra_topic_similarity.csv"])}
+  {files_line(T, ["summary_metrics.csv", "pairing_integrity_flags.csv", "cpc_downstream_comparison.csv", "cpc_downstream_bootstrap.csv", "developer_demo_comparison.csv", "intra_topic_similarity.csv"])}
 </section>
 
 <section id="cost">

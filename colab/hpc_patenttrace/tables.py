@@ -72,12 +72,12 @@ def table3_files(run, out_dir=None):
     return _save(out, out_dir, "Table3_files_of_the_release.csv")
 
 
-def _ipc4(s):
+def _cpc4(s):
     try:
         lst = ast.literal_eval(str(s)) if str(s).strip().startswith("[") else []
     except Exception:
         lst = []
-    return {d["ipc"][:4] for d in lst if isinstance(d, dict) and d.get("ipc")}
+    return {d["cpc"][:4] for d in lst if isinstance(d, dict) and d.get("cpc")}
 
 
 def table5_probe(run, out_dir=None, min_label_n=20, random_state=42, test_size=0.2):
@@ -85,7 +85,7 @@ def table5_probe(run, out_dir=None, min_label_n=20, random_state=42, test_size=0
 
     Same procedure as section 8.9 of the pipeline: logistic regression on the unit-length embeddings, a
     family-grouped train/test split, CPC codes with at least min_label_n records.
-    Returns (table, comparison with release/ipc_downstream_comparison.csv written by the pipeline).
+    Returns (table, comparison with release/cpc_downstream_comparison.csv written by the pipeline).
     """
     from sklearn.linear_model import LogisticRegression
     from sklearn.metrics import accuracy_score, f1_score
@@ -95,17 +95,17 @@ def table5_probe(run, out_dir=None, min_label_n=20, random_state=42, test_size=0
 
     ids = run.csv("release/released_corpus_ids.csv", dtype=str)["patent_id"]
     corpus = run.csv("release/hpc_patenttrace_corpus.csv", dtype=str, keep_default_na=False,
-                     usecols=["patent_id", "main_ipc_4", "ipc_description", "family"])
+                     usecols=["patent_id", "main_cpc_4", "cpc_description", "family"])
     lab = ids.to_frame().merge(corpus, on="patent_id", how="left")
-    lab["all4"] = [s | ({m} if m else set()) for s, m in zip(lab["ipc_description"].map(_ipc4), lab["main_ipc_4"])]
+    lab["all4"] = [s | ({m} if m else set()) for s, m in zip(lab["cpc_description"].map(_cpc4), lab["main_cpc_4"])]
     cnt = pd.Series([c for s in lab["all4"] for c in s]).value_counts()
     keep = set(cnt[cnt >= min_label_n].index)
     lab["kept"] = [s & keep for s in lab["all4"]]
     mask = np.array([len(s) > 0 for s in lab["kept"]])
     sub = lab[mask].reset_index(drop=True)
     Y = MultiLabelBinarizer(classes=sorted(keep)).fit_transform(sub["kept"])
-    y4 = LabelEncoder().fit_transform(sub["main_ipc_4"].values)
-    y3 = LabelEncoder().fit_transform(sub["main_ipc_4"].str.strip().str.upper().str[:3].values)
+    y4 = LabelEncoder().fit_transform(sub["main_cpc_4"].values)
+    y3 = LabelEncoder().fit_transform(sub["main_cpc_4"].str.strip().str.upper().str[:3].values)
     root = sub["family"].str.extract(r"^\s*(\S+)", expand=False).fillna("")
     groups = np.where(root != "", root, "self:" + sub["patent_id"])
     ix = np.arange(len(sub))
@@ -123,7 +123,7 @@ def table5_probe(run, out_dir=None, min_label_n=20, random_state=42, test_size=0
             Yp = multi.predict(X[te])
             yp4 = LogisticRegression(max_iter=2000, C=1.0).fit(X[tr], y4[tr]).predict(X[te])
             yp3 = LogisticRegression(max_iter=2000, C=1.0).fit(X[tr], y3[tr]).predict(X[te])
-        rows.append({"Representation": rep, "ipc3_acc": accuracy_score(y3[te], yp3), "single_acc": accuracy_score(y4[te], yp4),
+        rows.append({"Representation": rep, "cpc3_acc": accuracy_score(y3[te], yp3), "single_acc": accuracy_score(y4[te], yp4),
                      "any_label_hit": float((np.logical_and(Y[te], Yp).sum(1) > 0).mean()),
                      "ml_f1_micro": f1_score(Y[te], Yp, average="micro", zero_division=0)})
     res = pd.DataFrame(rows)
@@ -131,15 +131,15 @@ def table5_probe(run, out_dir=None, min_label_n=20, random_state=42, test_size=0
     floor4 = float(pd.Series(y4[tr]).value_counts(normalize=True).iloc[0])
 
     pct = lambda v: f"{v * 100:.1f}%"
-    table = pd.DataFrame({"Representation": res["Representation"], "Three-character accuracy": res["ipc3_acc"].map(pct),
+    table = pd.DataFrame({"Representation": res["Representation"], "Three-character accuracy": res["cpc3_acc"].map(pct),
                           "Four-character accuracy": res["single_acc"].map(pct),
                           "At least one label correct": res["any_label_hit"].map(pct),
                           "Multi-label micro-F1": res["ml_f1_micro"].map(lambda v: f"{v:.4f}")})
     table.loc[len(table)] = ["Share of the largest class in the training set (no vectors)", pct(floor3), pct(floor4), "—", "—"]
     table.attrs.update(n_test=len(te), n_records=len(sub), n_labels=Y.shape[1])
 
-    written = run.csv("release/ipc_downstream_comparison.csv").set_index("representation")
-    cols = ["ipc3_acc", "single_acc", "any_label_hit", "ml_f1_micro"]
+    written = run.csv("release/cpc_downstream_comparison.csv").set_index("representation")
+    cols = ["cpc3_acc", "single_acc", "any_label_hit", "ml_f1_micro"]
     check = res.set_index("Representation")[cols].round(4).join(written[cols], rsuffix=" (pipeline)")
     check["same"] = ["yes" if all(abs(check.loc[r, c] - check.loc[r, f"{c} (pipeline)"]) < 5e-5 for c in cols) else "NO"
                      for r in check.index]

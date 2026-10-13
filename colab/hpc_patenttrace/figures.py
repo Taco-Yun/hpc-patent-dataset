@@ -110,16 +110,16 @@ def fig1_construction(run, out_dir=None):
 def fig2_two_views(run, out_dir=None, top_classes=10, top_topics=12):
     """Fig. 2: the two-dimensional UMAP map of the synthesized embeddings, coloured by class (a) and topic (b)."""
     clu = run.csv("release/cluster_results.csv", dtype=str, keep_default_na=False,
-                  usecols=["patent_id", "main_ipc_3", "merged_topic"])
+                  usecols=["patent_id", "main_cpc_3", "merged_topic"])
     xy = run.csv("umap2d_coords.csv", dtype={"patent_id": str})     # section 7.7 of the pipeline
     plot = clu.merge(xy, on="patent_id", how="inner").reset_index(drop=True)
     cmap = [plt.get_cmap("tab20")(i) for i in range(20)]
-    ipc3, topic = plot["main_ipc_3"].astype(str), plot["merged_topic"].astype(str)
-    n_ipc3, n_top = ipc3.nunique(), topic[~topic.isin(NOISE_LABELS)].nunique()
+    cpc3, topic = plot["main_cpc_3"].astype(str), plot["merged_topic"].astype(str)
+    n_cpc3, n_top = cpc3.nunique(), topic[~topic.isin(NOISE_LABELS)].nunique()
     with plt.rc_context(STYLE):
         fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.6))
         for ax, lab, top_n, title, other in (
-                (axes[0], ipc3, top_classes, "a  Three-character CPC class", "other classes"),
+                (axes[0], cpc3, top_classes, "a  Three-character CPC class", "other classes"),
                 (axes[1], topic, top_topics, "b  Merged topic", "other or no topic")):
             lab = lab.where(~lab.isin(NOISE_LABELS), "")
             top = lab[lab != ""].value_counts().head(top_n).index.tolist()
@@ -142,6 +142,6 @@ def fig2_two_views(run, out_dir=None, top_classes=10, top_topics=12):
                       frameon=False, handletextpad=0.2, columnspacing=0.8)
         fig.suptitle(f"UMAP of the synthesized embeddings ({len(plot):,} records)", fontsize=8.5)
         fig.tight_layout(rect=(0, 0, 1, 0.96))
-    fig.n_classes, fig.n_topics = n_ipc3, n_top
+    fig.n_classes, fig.n_topics = n_cpc3, n_top
     return _save(fig, out_dir, "Fig2_two_views.png")
 
