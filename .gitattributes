@@ -1,3 +1,5 @@
 # Sample data (patent HTML pages, JSON, CSV) is not source code:
 # keep it out of GitHub's language statistics.
 data/** linguist-vendored
+# The results page (docs/, GitHub Pages) is documentation generated from the release files.
+docs/** linguist-documentation

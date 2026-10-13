@@ -1,0 +1,7 @@
+Representation,Three-character accuracy,Four-character accuracy,At least one label correct,Multi-label micro-F1
+abstract,67.2%,55.5%,77.3%,0.6049
+fulltext-truncated,66.6%,55.1%,77.6%,0.6077
+direct-brief,67.2%,56.5%,77.5%,0.6069
+direct-full,66.3%,56.1%,78.3%,0.6094
+synthesized,67.3%,56.6%,79.3%,0.6187
+Share of the largest class in the training set (no vectors),52.2%,42.7%,—,—

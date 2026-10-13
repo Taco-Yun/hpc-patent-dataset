@@ -1,0 +1,14 @@
+Quantity,Value
+query result (publication numbers),21947
+removed by the homonym screening,5513
+candidates,16434
+removed by the completeness filter,9276
+five complete fields,7158
+excluded by the inclusion rule,623
+released records,6535
+clusters (HDBSCAN),51
+merged topics,25
+records without a topic,1502
+records whose current assignee changed,763
+changes supported by a title transfer,417
+records whose effective assignee differs,404

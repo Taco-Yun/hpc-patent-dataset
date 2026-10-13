@@ -1,0 +1,18 @@
+quantity,this_run,released_2026_10_11,same
+records in the input file,"21,947","21,947",yes
+records used in this run,"21,947","21,947",yes
+removed: HPC has another sense,"5,513","5,513",yes
+candidates,"16,434","16,434",yes
+five complete fields,"7,158","7,158",yes
+released corpus,"6,535","6,535",yes
+excluded by the inclusion rule,623,623,yes
+records that define HPC (sense_basis),"2,831","2,831",yes
+litigated-family subset,25,25,yes
+clusters (HDBSCAN),51,51,yes
+noise records,"1,502","1,502",yes
+merged topics,25,25,yes
+records with a topic,"5,033","5,033",yes
+"NMI, topics vs CPC subclasses",0.4558,0.4558,yes
+pairing flags (8.4),143,143,yes
+human-audit sample: records,62,62,yes
+human-audit sample: sentences,349,349,yes

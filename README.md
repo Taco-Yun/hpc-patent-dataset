@@ -2,7 +2,9 @@
 
 Python scripts that build a patent dataset from [Google Patents](https://patents.google.com/) in five steps:
 search Google Patents one filing date at a time, collect the patent IDs, download each patent page,
-parse the pages, and flatten the result into one CSV file.
+parse the pages, and flatten the result into one CSV file. A sixth step, a Colab notebook in `colab/`, turns
+that CSV file into the released dataset (see [Step 6](#step-6-build-the-released-dataset-on-colab-notebooks-in-colab)).
+The results of the released dataset are shown on the [results page](https://taco-yun.github.io/hpc-patent-dataset/) ([中文](https://taco-yun.github.io/hpc-patent-dataset/index_tw.html)).
 
 The default settings reproduce the **HPC dataset**: US granted patents in English that match the query
 `(HPC)` and were **filed** between 2015-01-01 and 2025-12-31. Every setting can be changed on the command line.
@@ -70,6 +72,7 @@ flowchart LR
 | 3 | `src/step3_download_patent_pages.py` | `interim/patent_id_from_{start}_{end}.csv` | `raw/html/{patent_id}.html` | yes (HTTP) |
 | 4 | `src/step4_parse_patent_pages.py` | `raw/html/*.html` | `interim/parsed_data.json` | no (unless `--download-pdf`) |
 | 5 | `src/step5_build_hpc_dataset.py` | `interim/parsed_data.json` | `processed/HPC_15to25_v2.csv` | no |
+| 6 | `colab/step6_patentsum_pipeline.ipynb` (Colab notebook, GPU) | `processed/HPC_15to25_v2.csv`, USPTO `patents.dta` | `<output folder>/release/` (set in the notebook) | yes (model downloads) |
 
 All paths in the table are relative to the **data directory**, set with `--data-dir` (default: `data/`).
 
@@ -77,17 +80,21 @@ All paths in the table are relative to the **data directory**, set with `--data-
 
 ```
 .
-├── src/                         Python scripts, one per step, plus utils.py
+├── src/                         Python scripts of steps 1-5, plus utils.py
+├── colab/                       step 6 notebooks (Google Colab) and their code, hpc_patenttrace/
+├── docs/                        results page of the released dataset (GitHub Pages)
 ├── scripts/
 │   ├── run_sample.sh            steps 1-5 on a small date window   -> data/sample/
 │   ├── run_full.sh              steps 1-5 for 2015-01-01..2025-12-31 -> data/
-│   └── run_pipeline.sh          shared runner used by the two scripts above
+│   ├── run_pipeline.sh          shared runner used by the two scripts above
+│   └── build_results_page.py    builds docs/ from release/ of a step 6 run
 ├── data/                        data directory of the full run (a few example files are included)
 │   ├── raw/id_list_json/        step 1 output
 │   ├── raw/html/                step 3 output
 │   ├── raw/pdf/                 step 4 output with --download-pdf (never committed)
 │   ├── interim/                 step 2 and step 4 outputs
 │   ├── processed/               step 5 output
+│   ├── step6/                   figures and reference files of local step 6 test runs
 │   └── sample/                  complete output of run_sample.sh (same sub-folders)
 ├── pyproject.toml               dependencies (uv)
 ├── uv.lock                      exact versions (uv)
@@ -308,6 +315,43 @@ section is missing on that page; they are expected. Only `⛔ Failed to parse, s
 
 Options: `--data-dir`.
 
+### Step 6: build the released dataset on Colab (notebooks in `colab/`)
+
+Step 6 turns `processed/HPC_15to25_v2.csv` into the HPC-PatentTrace data release: removal of the records in which HPC
+has another meaning, the corpus rules, three summary layers written by language models, SPECTER2 embeddings, clusters
+and topics, the ownership evidence, the technical validation and the release files. The notebooks run on Google Colab.
+Their code is in the package `colab/hpc_patenttrace/` (one file per step in `steps/`), so a notebook shows only its
+parameters, figures and tables.
+
+| Notebook | Use | Open |
+|---|---|---|
+| `colab/step6_patentsum_pipeline.ipynb` | the pipeline, from the crawler output to the release files (English) | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/step6_patentsum_pipeline.ipynb) |
+| `colab/step6_patentsum_pipeline_tw.ipynb` | the same notebook with Traditional Chinese explanations | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/step6_patentsum_pipeline_tw.ipynb) |
+| `colab/reproduce_figures_tables.ipynb` | the figures and tables of the data descriptor, from the output folder of a full pipeline run (no GPU) | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/reproduce_figures_tables.ipynb) |
+| `colab/reproduce_figures_tables_tw.ipynb` | the same notebook with Traditional Chinese explanations | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/reproduce_figures_tables_tw.ipynb) |
+
+GitHub only displays notebooks; the Colab links open them from this repository in Google Colab, where they run. Each
+notebook starts with a Parameters cell that holds the folder on Google Drive and the input files. The pipeline reads
+`HPC_15to25_v2.csv` and `patents.dta` of the USPTO Patent Litigation Docket Reports (district-court cases) and writes
+its outputs to `OUTPUT_DIR/full` (`release/` holds the release files). Generating the facets and the three summary
+layers took about 20 hours on one A100 80 GB in the released run. With `REUSE_FROM` set to the output folder of an
+earlier full run, the pipeline reuses its generated layers and runs in an estimated 1 to 1.5 hours.
+`PROFILE = "sample"` runs every step on 400 records drawn at random.
+
+**Results page.** `docs/index.html` (English) and `docs/index_tw.html` (Traditional Chinese) show the results of the
+released dataset: corpus construction, composition, summary layers, topics, ownership, technical validation, cost
+and files. The pages are published with GitHub Pages at https://taco-yun.github.io/hpc-patent-dataset/ and https://taco-yun.github.io/hpc-patent-dataset/index_tw.html. Every number on the pages
+is read from `release/` in the output folder of a full pipeline run by `scripts/build_results_page.py`:
+
+```bash
+uv run python scripts/build_results_page.py --run path/to/output/full
+```
+
+**Test outputs.** `data/step6/` holds the figures and reference files of two local test runs of the pipeline
+notebook (the full input with reused generated layers, and the 400-record sample profile); see `data/step6/README.md`.
+
+The charts load plotly.js from a CDN, so the pages need an internet connection.
+
 ## Output columns (`HPC_15to25_v2.csv`)
 
 | Column | Content |
@@ -354,6 +398,11 @@ df["citations"] = df["citations"].apply(ast.literal_eval)
 **About the `ipc` column names.** The codes come from the *Classifications* section of each Google Patents page.
 In every page we checked (77 pages, 6,215 classification entries) each entry is marked `IsCPC="true"`,
 so these are **CPC** codes; the column names keep the `ipc` prefix for compatibility.
+At the four-character level most CPC subclasses carry the same code as an IPC subclass. In the 6,535 released
+records the exceptions are the Y section, the CPC indexing schemes B60Y, C01P, C12Y, E05Y, F05B and F05D, and
+H01L, which the IPC version 2026.01 no longer contains. The release files written by step 6 use cpc in place of
+ipc in every file and column name (for example `main_cpc`, `main_cpc_4`, `cpc_description` and
+`cpc_downstream_comparison.csv`); `release/NAME_MAPPING_ipc_to_cpc.csv` lists each old and new name.
 
 ## Browser automation notes (version compatibility)
 

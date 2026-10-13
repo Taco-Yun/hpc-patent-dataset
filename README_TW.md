@@ -1,7 +1,8 @@
 # Google Patents HPC 資料集流程
 
 用 Python 腳本分五個步驟，從 [Google Patents](https://patents.google.com/) 建立專利資料集：
-逐日查詢 Google Patents、整理專利號清單、下載每篇專利頁面、解析頁面，最後攤平成一個 CSV 檔。
+逐日查詢 Google Patents、整理專利號清單、下載每篇專利頁面、解析頁面，最後攤平成一個 CSV 檔。第六步是 `colab/` 裡的 Colab notebook，把這個 CSV 檔轉成釋出資料集（見 [Step 6](#step-6在-colab-產生釋出資料集colab-裡的-notebook)）。
+釋出資料集的成果請見[成果頁](https://taco-yun.github.io/hpc-patent-dataset/index_tw.html)（[English](https://taco-yun.github.io/hpc-patent-dataset/)）。
 
 預設設定會重現 **HPC 資料集**：符合查詢式 `(HPC)`、美國、已獲證、英文，且**申請日（filing date）**介於 2015-01-01 到 2025-12-31 的專利。所有設定都可以用命令列參數修改。
 
@@ -68,6 +69,7 @@ flowchart LR
 | 3 | `src/step3_download_patent_pages.py` | `interim/patent_id_from_{start}_{end}.csv` | `raw/html/{patent_id}.html` | 是（HTTP） |
 | 4 | `src/step4_parse_patent_pages.py` | `raw/html/*.html` | `interim/parsed_data.json` | 否（加 `--download-pdf` 時才需要） |
 | 5 | `src/step5_build_hpc_dataset.py` | `interim/parsed_data.json` | `processed/HPC_15to25_v2.csv` | 否 |
+| 6 | `colab/step6_patentsum_pipeline.ipynb`（Colab notebook，需 GPU） | `processed/HPC_15to25_v2.csv`、USPTO `patents.dta` | `<輸出資料夾>/release/`（在 notebook 裡設定） | 是（下載模型） |
 
 表中路徑都相對於**資料目錄**，用 `--data-dir` 指定（預設 `data/`）。
 
@@ -75,17 +77,21 @@ flowchart LR
 
 ```
 .
-├── src/                         每個步驟一支 Python 腳本，加上 utils.py
+├── src/                         step 1-5 各一支 Python 腳本，加上 utils.py
+├── colab/                       step 6 的 notebook（Google Colab）與其程式 hpc_patenttrace/
+├── docs/                        釋出資料集的成果頁（GitHub Pages）
 ├── scripts/
 │   ├── run_sample.sh            小時間區間跑 step 1-5   -> data/sample/
 │   ├── run_full.sh              2015-01-01..2025-12-31 跑 step 1-5 -> data/
-│   └── run_pipeline.sh          上面兩支共用的執行腳本
+│   ├── run_pipeline.sh          上面兩支共用的執行腳本
+│   └── build_results_page.py    由第六步執行結果的 release/ 產生 docs/
 ├── data/                        完整執行的資料目錄（附少量範例檔）
 │   ├── raw/id_list_json/        step 1 輸出
 │   ├── raw/html/                step 3 輸出
 │   ├── raw/pdf/                 step 4 加 --download-pdf 時的輸出（不上傳）
 │   ├── interim/                 step 2、step 4 輸出
 │   ├── processed/               step 5 輸出
+│   ├── step6/                   第六步本機測試執行的圖與參考檔
 │   └── sample/                  run_sample.sh 的完整輸出（子目錄相同）
 ├── pyproject.toml               相依套件（uv）
 ├── uv.lock                      鎖定的確切版本（uv）
@@ -301,6 +307,37 @@ uv run python src/step5_build_hpc_dataset.py
 
 選項：`--data-dir`。
 
+### Step 6：在 Colab 產生釋出資料集（`colab/` 裡的 notebook）
+
+Step 6 把 `processed/HPC_15to25_v2.csv` 轉成 HPC-PatentTrace 釋出資料：移除 HPC 指其他意思的紀錄、套用語料規則、由語言模型
+寫出三個摘要層、SPECTER2 向量、分群與主題、權屬證據、技術驗證，最後寫出釋出檔。notebook 在 Google Colab 上執行，程式放在
+套件 `colab/hpc_patenttrace/`（每個步驟一個檔，在 `steps/`），所以 notebook 只顯示參數、圖與表。
+
+| Notebook | 用途 | 開啟 |
+|---|---|---|
+| `colab/step6_patentsum_pipeline.ipynb` | 流程本身，從爬蟲輸出到釋出檔（英文） | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/step6_patentsum_pipeline.ipynb) |
+| `colab/step6_patentsum_pipeline_tw.ipynb` | 同一份 notebook，說明文字為繁體中文 | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/step6_patentsum_pipeline_tw.ipynb) |
+| `colab/reproduce_figures_tables.ipynb` | 由流程完整執行的輸出資料夾畫出論文的圖與表（不需 GPU） | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/reproduce_figures_tables.ipynb) |
+| `colab/reproduce_figures_tables_tw.ipynb` | 同一份 notebook，說明文字為繁體中文 | [Colab](https://colab.research.google.com/github/Taco-Yun/hpc-patent-dataset/blob/main/colab/reproduce_figures_tables_tw.ipynb) |
+
+GitHub 只會顯示 notebook，不會執行；點 Colab 連結會直接從這個 repository 在 Google Colab 開啟，在那裡執行。每份 notebook
+開頭都有一格 Parameters，填 Google Drive 上的資料夾與輸入檔。流程需要 `HPC_15to25_v2.csv` 與 USPTO Patent Litigation
+Docket Reports 的 `patents.dta`（地方法院案件），輸出寫到 `OUTPUT_DIR/full`（釋出檔在 `release/`）。分面與三個摘要層的
+生成在釋出版本中用一張 A100 80 GB 約花 20 小時。`REUSE_FROM` 指向先前一次完整執行的輸出資料夾時，沿用其中的生成結果，
+估計約需 1 到 1.5 小時。`PROFILE = "sample"` 隨機抽 400 筆，把每一步都跑一遍。
+
+**成果頁。** `docs/index.html`（英文）與 `docs/index_tw.html`（繁體中文）呈現釋出資料集的成果：語料建立、語料組成、
+摘要層、主題、權屬、技術驗證、計算成本與釋出檔，並以 GitHub Pages 公開於 https://taco-yun.github.io/hpc-patent-dataset/ 與 https://taco-yun.github.io/hpc-patent-dataset/index_tw.html。頁面上的數字都由 `scripts/build_results_page.py` 直接讀取流程完整執行
+輸出資料夾裡的 `release/` 產生：
+
+```bash
+uv run python scripts/build_results_page.py --run path/to/output/full
+```
+
+**測試輸出。** `data/step6/` 是 pipeline notebook 兩次本機測試執行的圖與參考檔（完整輸入沿用生成結果，以及 400 筆的抽樣版），說明見 `data/step6/README.md`。
+
+圖表從 CDN 載入 plotly.js，所以開啟頁面需要網路。
+
 ## 輸出欄位（`HPC_15to25_v2.csv`）
 
 | 欄位 | 內容 |
@@ -347,6 +384,9 @@ df["citations"] = df["citations"].apply(ast.literal_eval)
 **關於欄位名稱裡的 `ipc`：** 這些代碼取自 Google Patents 頁面的 *Classifications* 區塊。
 我們檢查過的所有頁面（77 頁、6,215 筆分類）每一筆都標記為 `IsCPC="true"`，
 所以實際上是 **CPC** 代碼；欄位名稱保留 `ipc` 是為了相容。
+在四碼層級，大多數 CPC 子類與 IPC 子類同碼。6,535 筆釋出紀錄中的例外是 Y 部、CPC 的索引碼 B60Y、C01P、C12Y、E05Y、
+F05B、F05D，以及 IPC 2026.01 版已不再收錄的 H01L。第六步寫出的釋出檔，所有檔名與欄名中的 ipc 都改為 cpc（例如 `main_cpc`、
+`main_cpc_4`、`cpc_description`、`cpc_downstream_comparison.csv`），新舊名稱的對照在 `release/NAME_MAPPING_ipc_to_cpc.csv`。
 
 ## 瀏覽器自動化注意事項（版本相容）
 
