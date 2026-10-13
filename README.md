@@ -4,6 +4,7 @@ Python scripts that build a patent dataset from [Google Patents](https://patents
 search Google Patents one filing date at a time, collect the patent IDs, download each patent page,
 parse the pages, and flatten the result into one CSV file. A sixth step, a Colab notebook in `colab/`, turns
 that CSV file into the released dataset (see [Step 6](#step-6-build-the-released-dataset-on-colab-notebooks-in-colab)).
+The results of the released dataset are shown on the [results page](https://taco-yun.github.io/hpc-patent-dataset/) ([中文](https://taco-yun.github.io/hpc-patent-dataset/index_tw.html)).
 
 The default settings reproduce the **HPC dataset**: US granted patents in English that match the query
 `(HPC)` and were **filed** between 2015-01-01 and 2025-12-31. Every setting can be changed on the command line.
@@ -93,6 +94,7 @@ All paths in the table are relative to the **data directory**, set with `--data-
 │   ├── raw/pdf/                 step 4 output with --download-pdf (never committed)
 │   ├── interim/                 step 2 and step 4 outputs
 │   ├── processed/               step 5 output
+│   ├── step6/                   figures and reference files of local step 6 test runs
 │   └── sample/                  complete output of run_sample.sh (same sub-folders)
 ├── pyproject.toml               dependencies (uv)
 ├── uv.lock                      exact versions (uv)
@@ -338,12 +340,15 @@ earlier full run, the pipeline reuses its generated layers and runs in an estima
 
 **Results page.** `docs/index.html` (English) and `docs/index_tw.html` (Traditional Chinese) show the results of the
 released dataset: corpus construction, composition, summary layers, topics, ownership, technical validation, cost
-and files. Every number on the pages is read from `release/` in the output folder of a full pipeline run by
-`scripts/build_results_page.py`:
+and files. The pages are published with GitHub Pages at https://taco-yun.github.io/hpc-patent-dataset/ and https://taco-yun.github.io/hpc-patent-dataset/index_tw.html. Every number on the pages
+is read from `release/` in the output folder of a full pipeline run by `scripts/build_results_page.py`:
 
 ```bash
 uv run python scripts/build_results_page.py --run path/to/output/full
 ```
+
+**Test outputs.** `data/step6/` holds the figures and reference files of two local test runs of the pipeline
+notebook (the full input with reused generated layers, and the 400-record sample profile); see `data/step6/README.md`.
 
 The charts load plotly.js from a CDN, so the pages need an internet connection.
 

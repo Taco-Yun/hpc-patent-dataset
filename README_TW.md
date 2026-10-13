@@ -2,6 +2,7 @@
 
 用 Python 腳本分五個步驟，從 [Google Patents](https://patents.google.com/) 建立專利資料集：
 逐日查詢 Google Patents、整理專利號清單、下載每篇專利頁面、解析頁面，最後攤平成一個 CSV 檔。第六步是 `colab/` 裡的 Colab notebook，把這個 CSV 檔轉成釋出資料集（見 [Step 6](#step-6在-colab-產生釋出資料集colab-裡的-notebook)）。
+釋出資料集的成果請見[成果頁](https://taco-yun.github.io/hpc-patent-dataset/index_tw.html)（[English](https://taco-yun.github.io/hpc-patent-dataset/)）。
 
 預設設定會重現 **HPC 資料集**：符合查詢式 `(HPC)`、美國、已獲證、英文，且**申請日（filing date）**介於 2015-01-01 到 2025-12-31 的專利。所有設定都可以用命令列參數修改。
 
@@ -90,6 +91,7 @@ flowchart LR
 │   ├── raw/pdf/                 step 4 加 --download-pdf 時的輸出（不上傳）
 │   ├── interim/                 step 2、step 4 輸出
 │   ├── processed/               step 5 輸出
+│   ├── step6/                   第六步本機測試執行的圖與參考檔
 │   └── sample/                  run_sample.sh 的完整輸出（子目錄相同）
 ├── pyproject.toml               相依套件（uv）
 ├── uv.lock                      鎖定的確切版本（uv）
@@ -325,12 +327,14 @@ Docket Reports 的 `patents.dta`（地方法院案件），輸出寫到 `OUTPUT_
 估計約需 1 到 1.5 小時。`PROFILE = "sample"` 隨機抽 400 筆，把每一步都跑一遍。
 
 **成果頁。** `docs/index.html`（英文）與 `docs/index_tw.html`（繁體中文）呈現釋出資料集的成果：語料建立、語料組成、
-摘要層、主題、權屬、技術驗證、計算成本與釋出檔。頁面上的數字都由 `scripts/build_results_page.py` 直接讀取流程完整執行
+摘要層、主題、權屬、技術驗證、計算成本與釋出檔，並以 GitHub Pages 公開於 https://taco-yun.github.io/hpc-patent-dataset/ 與 https://taco-yun.github.io/hpc-patent-dataset/index_tw.html。頁面上的數字都由 `scripts/build_results_page.py` 直接讀取流程完整執行
 輸出資料夾裡的 `release/` 產生：
 
 ```bash
 uv run python scripts/build_results_page.py --run path/to/output/full
 ```
+
+**測試輸出。** `data/step6/` 是 pipeline notebook 兩次本機測試執行的圖與參考檔（完整輸入沿用生成結果，以及 400 筆的抽樣版），說明見 `data/step6/README.md`。
 
 圖表從 CDN 載入 plotly.js，所以開啟頁面需要網路。
 

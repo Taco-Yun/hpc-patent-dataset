@@ -59,8 +59,13 @@ yarn.lock
 # data/interim/parsed_data.json
 # data/processed/*.csv
 
-# Step 6 outputs of a local run (SAVE_DIR)
-data/step6/
+# Step 6 outputs of a local run: only the figures and reference files described in data/step6/README.md
+# are committed; executed notebooks and other local outputs stay out
+data/step6/*
+!data/step6/README.md
+!data/step6/figures_full/
+!data/step6/figures_sample/
+!data/step6/reference/
 
 # ---- Local files ----
 connectdb.py

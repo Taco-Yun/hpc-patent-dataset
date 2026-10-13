@@ -1,0 +1,4 @@
+Layer,Model calls,Input sections and token budgets,Output
+direct-brief,"one call (Qwen2.5-14B-Instruct, bfloat16)","title, abstract; background 800, summary input 400, detailed description 800","≤300 new tokens, 5–7 sentences"
+direct-full,"one call (Qwen2.5-14B-Instruct, bfloat16)","title, abstract; background 1,500, summary input 1,500, detailed description 2,000","≤300 new tokens, 5–7 sentences"
+synthesized,"facet step (Llama-3.1-8B-Instruct, 4-bit NF4, three calls) and two calls (Qwen2.5-14B-Instruct, bfloat16)","facets from background 1,500, summary input 1,500, detailed description 2,000 (facet model tokens); then title, abstract and the facets","≤300 new tokens, 5–7 sentences"

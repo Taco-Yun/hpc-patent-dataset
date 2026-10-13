@@ -1,0 +1,63 @@
+kind,file,old_name,new_name
+value,MANIFEST_release.csv,ipc_downstream_bootstrap.csv,cpc_downstream_bootstrap.csv
+value,MANIFEST_release.csv,ipc_downstream_comparison.csv,cpc_downstream_comparison.csv
+column,cluster_results.csv,main_ipc_4,main_cpc_4
+column,cluster_results.csv,main_ipc_3,main_cpc_3
+column,differential_exclusion.csv,ipc_section,cpc_section
+column,excluded_no_expansion.csv,main_ipc,main_cpc
+column,excluded_no_expansion.csv,main_ipc_description,main_cpc_description
+column,excluded_no_expansion.csv,main_ipc_4,main_cpc_4
+column,excluded_no_expansion.csv,main_ipc_description_4,main_cpc_description_4
+column,excluded_no_expansion.csv,ipc_description,cpc_description
+column,excluded_no_expansion.csv,main_ipc_3,main_cpc_3
+json key,excluded_no_expansion.csv,ipc,cpc
+json key,excluded_no_expansion.csv,ipc_description,cpc_description
+column,hpc_patenttrace_corpus.csv,main_ipc,main_cpc
+column,hpc_patenttrace_corpus.csv,main_ipc_description,main_cpc_description
+column,hpc_patenttrace_corpus.csv,main_ipc_4,main_cpc_4
+column,hpc_patenttrace_corpus.csv,main_ipc_description_4,main_cpc_description_4
+column,hpc_patenttrace_corpus.csv,ipc_description,cpc_description
+column,hpc_patenttrace_corpus.csv,main_ipc_3,main_cpc_3
+json key,hpc_patenttrace_corpus.csv,ipc,cpc
+json key,hpc_patenttrace_corpus.csv,ipc_description,cpc_description
+file,cpc_downstream_bootstrap.csv,ipc_downstream_bootstrap.csv,cpc_downstream_bootstrap.csv
+file,cpc_downstream_comparison.csv,ipc_downstream_comparison.csv,cpc_downstream_comparison.csv
+column,cpc_downstream_comparison.csv,ipc3_acc,cpc3_acc
+column,cpc_downstream_comparison.csv,ipc3_f1_macro,cpc3_f1_macro
+column,cpc_downstream_comparison.csv,n_ipc3_classes,n_cpc3_classes
+column,merge_map_worksheet.csv,top_ipc,top_cpc
+value,runtime_log_release.csv,8.9  abstract  ipc3,8.9  abstract  cpc3
+value,runtime_log_release.csv,8.9  direct-brief  ipc3,8.9  direct-brief  cpc3
+value,runtime_log_release.csv,8.9  direct-full  ipc3,8.9  direct-full  cpc3
+value,runtime_log_release.csv,8.9  fulltext-truncated  ipc3,8.9  fulltext-truncated  cpc3
+value,runtime_log_release.csv,8.9  synthesized  ipc3,8.9  synthesized  cpc3
+file,tables/completeness_bias_by_cpc4.csv,tables/completeness_bias_by_ipc4.csv,tables/completeness_bias_by_cpc4.csv
+file,tables/completeness_bias_by_cpc_section.csv,tables/completeness_bias_by_ipc_section.csv,tables/completeness_bias_by_cpc_section.csv
+file,tables/e6_cpc_topic_dispersion.csv,tables/e6_ipc_topic_dispersion.csv,tables/e6_cpc_topic_dispersion.csv
+file,tables/e6_top_share_main_cpc_3.csv,tables/e6_top_share_main_ipc_3.csv,tables/e6_top_share_main_cpc_3.csv
+column,tables/e6_top_share_main_cpc_3.csv,n_ipc,n_cpc
+file,tables/e6_top_share_main_cpc_4.csv,tables/e6_top_share_main_ipc_4.csv,tables/e6_top_share_main_cpc_4.csv
+column,tables/e6_top_share_main_cpc_4.csv,n_ipc,n_cpc
+column,tables/e6_top_share_summary.csv,ipc_level,cpc_level
+column,tables/e6_top_share_summary.csv,n_ipc,n_cpc
+value,tables/e6_top_share_summary.csv,main_ipc_3,main_cpc_3
+value,tables/e6_top_share_summary.csv,main_ipc_4,main_cpc_4
+file,tables/e6_topic_cpc_concentration.csv,tables/e6_topic_ipc_concentration.csv,tables/e6_topic_cpc_concentration.csv
+file,tables/e6_topic_cpc_metrics.csv,tables/e6_topic_ipc_metrics.csv,tables/e6_topic_cpc_metrics.csv
+file,tables/cpc3_counts.csv,tables/ipc3_counts.csv,tables/cpc3_counts.csv
+column,tables/cpc3_counts.csv,main_ipc_3,main_cpc_3
+value,tables/t2_field_completeness.csv,ipc_description,cpc_description
+value,tables/t2_field_completeness.csv,main_ipc,main_cpc
+value,tables/t2_field_completeness.csv,main_ipc_3,main_cpc_3
+value,tables/t2_field_completeness.csv,main_ipc_4,main_cpc_4
+value,tables/t2_field_completeness.csv,main_ipc_description,main_cpc_description
+value,tables/t2_field_completeness.csv,main_ipc_description_4,main_cpc_description_4
+file,tables/t5a_cpc_section.csv,tables/t5a_ipc_section.csv,tables/t5a_cpc_section.csv
+file,tables/t5b_cpc_top15.csv,tables/t5b_ipc_top15.csv,tables/t5b_cpc_top15.csv
+column,topic_summary.csv,top_ipc,top_cpc
+column,usage_landscape_screen.csv,top_ipc3,top_cpc3
+column,usage_landscape_screen.csv,top_ipc3_share,top_cpc3_share
+column,usage_landscape_screen.csv,n_ipc3_classes,n_cpc3_classes
+column,usage_landscape_screen.csv,top_ipc4,top_cpc4
+column,usage_landscape_screen.csv,top_ipc4_share,top_cpc4_share
+column,usage_landscape_screen.csv,n_ipc4_classes,n_cpc4_classes
