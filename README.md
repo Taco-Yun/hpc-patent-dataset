@@ -393,6 +393,9 @@ df["citations"] = df["citations"].apply(ast.literal_eval)
 **About the `ipc` column names.** The codes come from the *Classifications* section of each Google Patents page.
 In every page we checked (77 pages, 6,215 classification entries) each entry is marked `IsCPC="true"`,
 so these are **CPC** codes; the column names keep the `ipc` prefix for compatibility.
+At the four-character level most CPC subclasses carry the same code as an IPC subclass. In the 6,535 released
+records the exceptions are the Y section, the CPC indexing schemes B60Y, C01P, C12Y, E05Y, F05B and F05D, and
+H01L, which the IPC version 2026.01 no longer contains.
 
 ## Browser automation notes (version compatibility)
 

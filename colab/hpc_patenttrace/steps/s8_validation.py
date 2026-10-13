@@ -425,7 +425,7 @@ print(f"  3  synthesized-only terms in the whitelist : {rows_o[1]['whitelist_pct
 print(f"  4  if noise, 1–3 must all show no difference (for comparison; not counted separately)")
 print(f"\nShare of long terms not in the full text (upper bound of fabrication; compared against the full text with the claims): "
       + " | ".join(f"{g} {tally[g]['not_in_source']/_tot[g]*100:.1f}%" for g in GROUPS))
-print("  ← upper bound, not an error rate; the direct evidence is the human audit (8.8 sample)")
+print("  ← upper bound, not an error rate: a term that is not in the full text is not necessarily wrong")
 _nis_df = pd.DataFrame(_nis_rows)
 _nis_df["not_in_source_share"] = _nis_df["n_not_in_full_text"] / _nis_df["n_synth_only_terms"].replace(0, np.nan)
 _nis_df.to_csv(os.path.join(SAVE_DIR, "not_in_full_text_per_record.csv"), index=False)
